@@ -1,4 +1,4 @@
-/* dry&co — catalogue, cart, interactions */
+﻿/* dry&co â€” catalogue, cart, interactions */
 
 const PRODUCTS = [
   {
@@ -6,12 +6,12 @@ const PRODUCTS = [
     name: "Cape Dry Robe",
     category: "drying",
     catLabel: "Drying",
-    price: 1290,
+    price: 690,
     badge: "bestseller",
     desc: "Double-layer microfibre robe that drinks water after beach, bath or pool. Machine washable. Made for SA sun & splash.",
     colors: "Sand / Navy trim",
-    sizes: "S · M · L · XL",
-    source: "Local sew · Cape Town",
+    sizes: "S Â· M Â· L Â· XL",
+    source: "Local sew Â· Cape Town",
     image: "assets/images/products/product-dry-robe-sand.png",
     motif: "ROBE"
   },
@@ -20,12 +20,12 @@ const PRODUCTS = [
     name: "Harbour Dry Coat",
     category: "drying",
     catLabel: "Drying",
-    price: 1450,
+    price: 790,
     badge: "new",
     desc: "Longer coverage coat with leather badge. Ideal for wet Labradors and muddy walks home.",
     colors: "Navy",
-    sizes: "S · M · L · XL",
-    source: "Local sew · Cape Town",
+    sizes: "S Â· M Â· L Â· XL",
+    source: "Local sew Â· Cape Town",
     image: "assets/images/products/product-dry-robe-navy.png",
     motif: "COAT"
   },
@@ -34,12 +34,12 @@ const PRODUCTS = [
     name: "Estate Check Blanket",
     category: "home",
     catLabel: "Home",
-    price: 1680,
+    price: 850,
     badge: "bestseller",
     desc: "Heavy navy & ivory buffalo check throw with stitched leather DRY & CO. patch. Sofa, car boot, picnic.",
     colors: "Navy / Ivory",
-    sizes: "120 × 150 cm",
-    source: "Woven import · finished in SA",
+    sizes: "120 Ã— 150 cm",
+    source: "Woven import Â· finished in SA",
     image: "assets/images/products/product-check-blanket.png",
     motif: "CHECK"
   },
@@ -48,24 +48,24 @@ const PRODUCTS = [
     name: "Winelands Travel Mat",
     category: "home",
     catLabel: "Home",
-    price: 980,
+    price: 490,
     desc: "Fold-flat waterproof mat with soft face. Protects car seats, guest beds and Airbnb floors.",
     colors: "Stone",
-    sizes: "70 × 100 cm",
+    sizes: "70 Ã— 100 cm",
     source: "Local cut & sew",
     image: "assets/images/products/product-travel-mat.png",
     motif: "MAT"
   },
   {
     id: "boucle-bed",
-    name: "Constantia Bouclé Bed",
+    name: "Constantia BouclÃ© Bed",
     category: "home",
     catLabel: "Home",
-    price: 3890,
+    price: 1890,
     badge: "bestseller",
-    desc: "Furniture-grade orthopedic bed in soft bouclé. Removable cover. Looks like lounge seating, not a dog crate.",
-    colors: "Oatmeal · Charcoal",
-    sizes: "M · L",
+    desc: "Furniture-grade orthopedic bed in soft bouclÃ©. Removable cover. Looks like lounge seating, not a dog crate.",
+    colors: "Oatmeal Â· Charcoal",
+    sizes: "M Â· L",
     source: "Local upholstery",
     image: "assets/images/products/product-boucle-bed.png",
     motif: "BED"
@@ -75,11 +75,11 @@ const PRODUCTS = [
     name: "Karoo Leather Collar",
     category: "leather",
     catLabel: "Leather",
-    price: 790,
+    price: 420,
     badge: "bestseller",
     desc: "Full-grain vegetable-tanned collar, solid brass hardware, hand-finished edges. Ages beautifully.",
-    colors: "Tan · Navy · Olive",
-    sizes: "S · M · L",
+    colors: "Tan Â· Navy Â· Olive",
+    sizes: "S Â· M Â· L",
     source: "SA leather goods",
     image: "assets/images/products/product-leather-collar.png",
     motif: "COLLAR"
@@ -89,9 +89,9 @@ const PRODUCTS = [
     name: "Long Walk Lead",
     category: "leather",
     catLabel: "Leather",
-    price: 920,
+    price: 480,
     desc: "1.4 m matching lead with soft hand-feel and reinforced stitch points. Pair with the Karoo collar.",
-    colors: "Tan · Navy · Olive",
+    colors: "Tan Â· Navy Â· Olive",
     sizes: "Standard",
     source: "SA leather goods",
     image: "assets/images/products/product-leather-lead.png",
@@ -102,11 +102,11 @@ const PRODUCTS = [
     name: "Quiet Y-Harness",
     category: "leather",
     catLabel: "Leather",
-    price: 1180,
+    price: 620,
     badge: "new",
     desc: "Minimal Y-front harness in leather & webbing. Even pull distribution, no choke, brass fittings.",
     colors: "Tan / Navy",
-    sizes: "S · M · L",
+    sizes: "S Â· M Â· L",
     source: "SA leather + webbing",
     image: "assets/images/products/product-harness.png",
     motif: "HARNESS"
@@ -116,8 +116,8 @@ const PRODUCTS = [
     name: "Pocket Treat Pouch",
     category: "leather",
     catLabel: "Leather",
-    price: 520,
-    desc: "Belt-clip leather pouch for treats & bags. Quiet magnetic closure — no plastic rattle on walks.",
+    price: 280,
+    desc: "Belt-clip leather pouch for treats & bags. Quiet magnetic closure â€” no plastic rattle on walks.",
     colors: "Tan",
     sizes: "One size",
     source: "SA leather goods",
@@ -129,10 +129,10 @@ const PRODUCTS = [
     name: "Stone Pair Bowls",
     category: "dining",
     catLabel: "Dining",
-    price: 1120,
+    price: 560,
     badge: "bestseller",
-    desc: "Weighted matte ceramic bowls — food & water — that sit beautifully on stone floors and kitchen counters.",
-    colors: "Ivory · Slate",
+    desc: "Weighted matte ceramic bowls â€” food & water â€” that sit beautifully on stone floors and kitchen counters.",
+    colors: "Ivory Â· Slate",
     sizes: "Medium pair",
     source: "Local ceramics studio",
     image: "assets/images/products/product-ceramic-bowls.png",
@@ -143,10 +143,10 @@ const PRODUCTS = [
     name: "Oak Elevated Feeder",
     category: "dining",
     catLabel: "Dining",
-    price: 1890,
-    desc: "Solid oak stand with ceramic inserts. Better posture for medium–large dogs. Wipe-clean.",
+    price: 980,
+    desc: "Solid oak stand with ceramic inserts. Better posture for mediumâ€“large dogs. Wipe-clean.",
     colors: "Natural oak",
-    sizes: "M · L",
+    sizes: "M Â· L",
     source: "Local joinery",
     image: "assets/images/products/product-elevated-feeder.png",
     motif: "FEEDER"
@@ -156,12 +156,12 @@ const PRODUCTS = [
     name: "Weekend Boot Liner",
     category: "travel",
     catLabel: "Travel",
-    price: 1590,
+    price: 790,
     badge: "new",
     desc: "Quilted waterproof boot cover with raised bumpers. Keeps mud in, leather seats safe, dogs steady.",
     colors: "Navy",
     sizes: "Universal hatch / SUV",
-    source: "Imported shell · local finish",
+    source: "Imported shell Â· local finish",
     image: "assets/images/products/product-boot-liner.png",
     motif: "LINER"
   },
@@ -170,10 +170,10 @@ const PRODUCTS = [
     name: "Olive Grove Bandana",
     category: "apparel",
     catLabel: "Apparel",
-    price: 280,
+    price: 150,
     desc: "Soft cotton bandana in estate olive check. Easy gift, high margin, photogenic.",
     colors: "Olive check",
-    sizes: "S · M · L",
+    sizes: "S Â· M Â· L",
     source: "Local print & sew",
     image: "assets/images/products/product-bandana.png",
     motif: "BANDANA"
@@ -183,11 +183,11 @@ const PRODUCTS = [
     name: "Knit Companion Jumper",
     category: "apparel",
     catLabel: "Apparel",
-    price: 890,
+    price: 450,
     desc: "Fine-gauge cotton-blend jumper for cooler Cape evenings. Neutral enough for any interior.",
-    colors: "Cream · Navy",
-    sizes: "XS–XL",
-    source: "Knit import · branded SA",
+    colors: "Cream Â· Navy",
+    sizes: "XSâ€“XL",
+    source: "Knit import Â· branded SA",
     image: "assets/images/products/product-knit-jumper.png",
     motif: "KNIT"
   },
@@ -196,7 +196,7 @@ const PRODUCTS = [
     name: "After-Walk Calm Mist",
     category: "grooming",
     catLabel: "Grooming",
-    price: 420,
+    price: 220,
     desc: "Light linen-and-cedar grooming mist. Freshens coats between baths without soaking fur.",
     colors: "100 ml glass",
     sizes: "100 ml",
@@ -209,9 +209,9 @@ const PRODUCTS = [
     name: "No-Bath Dry Clean",
     category: "grooming",
     catLabel: "Grooming",
-    price: 380,
+    price: 190,
     badge: "bestseller",
-    desc: "Powder dry shampoo for in-between washes — the namesake ritual. Leaves coat soft, not chalky.",
+    desc: "Powder dry shampoo for in-between washes â€” the namesake ritual. Leaves coat soft, not chalky.",
     colors: "Apothecary tin",
     sizes: "80 g",
     source: "Local fill & label",
@@ -223,11 +223,11 @@ const PRODUCTS = [
     name: "Double Dry Towel Set",
     category: "drying",
     catLabel: "Drying",
-    price: 740,
+    price: 380,
     desc: "Two ultra-absorbent microfibre towels with leather loop tags. Pack in the boot, hang by the pool.",
     colors: "Sand pair",
-    sizes: "2 × large",
-    source: "Import textile · local brand",
+    sizes: "2 Ã— large",
+    source: "Import textile Â· local brand",
     image: "assets/images/products/product-towel-set.png",
     motif: "TOWEL"
   },
@@ -236,7 +236,7 @@ const PRODUCTS = [
     name: "Brass Name Disc",
     category: "leather",
     catLabel: "Leather",
-    price: 240,
+    price: 120,
     desc: "Solid brass ID disc, engraved locally. Pair with any collar. Quiet luxury detail that sells itself.",
     colors: "Brass",
     sizes: "Engraved",
@@ -361,12 +361,12 @@ function renderCart() {
           <h4>${p.name}</h4>
           <div class="meta">${money(p.price)}</div>
           <div class="qty-row">
-            <button type="button" data-qty="${p.id}" data-delta="-1" aria-label="Decrease">−</button>
+            <button type="button" data-qty="${p.id}" data-delta="-1" aria-label="Decrease">âˆ’</button>
             <span>${line.qty}</span>
             <button type="button" data-qty="${p.id}" data-delta="1" aria-label="Increase">+</button>
           </div>
         </div>
-        <button type="button" data-remove="${p.id}" aria-label="Remove">✕</button>
+        <button type="button" data-remove="${p.id}" aria-label="Remove">âœ•</button>
       </div>`;
 
     })
@@ -500,7 +500,7 @@ function initNewsletter() {
       e.preventDefault();
       const email = form.querySelector("input")?.value?.trim();
       if (!email) return;
-      showToast("You’re on the list");
+      showToast("Youâ€™re on the list");
       form.reset();
     });
   });
@@ -510,7 +510,7 @@ function initContact() {
   const form = document.querySelector("[data-contact]");
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
-    showToast("Message received — we’ll reply soon");
+    showToast("Message received â€” weâ€™ll reply soon");
     form.reset();
   });
 }
@@ -526,10 +526,10 @@ function whatsappCheckout() {
     const p = PRODUCTS.find((x) => x.id === line.id);
     if (!p) return "";
     total += p.price * line.qty;
-    return `• ${p.name} × ${line.qty} — ${money(p.price * line.qty)}`;
+    return `â€¢ ${p.name} Ã— ${line.qty} â€” ${money(p.price * line.qty)}`;
   });
   const text = encodeURIComponent(
-    `Hi dry&co — I’d like to order:\n\n${lines.join("\n")}\n\nTotal: ${money(total)}\n\nDelivery suburb: `
+    `Hi dry&co â€” Iâ€™d like to order:\n\n${lines.join("\n")}\n\nTotal: ${money(total)}\n\nDelivery suburb: `
   );
   // Replace with Charne's WhatsApp business number when ready
   window.open(`https://wa.me/27600000000?text=${text}`, "_blank");

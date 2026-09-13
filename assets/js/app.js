@@ -436,13 +436,62 @@ function initHeader() {
 }
 
 function initFilters() {
+  const valid = ["all", "drying", "leather", "home", "dining", "travel", "apparel", "grooming"];
+
+  function applyFilter(filter, updateHash = true) {
+    const key = valid.includes(filter) ? filter : "all";
+    document.querySelectorAll(".filter-btn").forEach((b) => {
+      b.classList.toggle("active", b.dataset.filter === key);
+    });
+    if (document.querySelector("#product-grid")) renderProducts(key);
+    if (updateHash && location.pathname.toLowerCase().includes("shop")) {
+      const next = key === "all" ? "#shop" : `#${key}`;
+      if (location.hash !== next) history.replaceState(null, "", next);
+    }
+    const target =
+      document.getElementById(key === "all" ? "shop" : key) ||
+      document.getElementById("shop");
+    if (target && location.pathname.toLowerCase().includes("shop")) {
+      setTimeout(() => target.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+    }
+  }
+
   document.querySelectorAll(".filter-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderProducts(btn.dataset.filter || "all");
+    btn.addEventListener("click", () => applyFilter(btn.dataset.filter || "all"));
+  });
+
+  // Collection chips / hash links on shop page
+  document.querySelectorAll('a[href^="#drying"], a[href^="#leather"], a[href^="#home"], a[href^="#dining"], a[href^="#travel"], a[href^="#apparel"], a[href^="#grooming"], a[href="#shop"]').forEach((a) => {
+    a.addEventListener("click", (e) => {
+      if (!document.querySelector("#product-grid")) return;
+      const hash = (a.getAttribute("href") || "").replace("#", "") || "shop";
+      if (hash === "shop") {
+        e.preventDefault();
+        applyFilter("all");
+        return;
+      }
+      if (valid.includes(hash)) {
+        e.preventDefault();
+        applyFilter(hash);
+      }
     });
   });
+
+  const hash = location.hash.replace("#", "");
+  if (document.querySelector("#product-grid")) {
+    if (valid.includes(hash)) applyFilter(hash, false);
+    else if (hash === "shop" || !hash) {
+      /* stay on all */
+    }
+  }
+}
+
+function initSectionScroll() {
+  const hash = location.hash.replace("#", "");
+  if (!hash || document.querySelector("#product-grid")) return;
+  const el = document.getElementById(hash);
+  if (!el) return;
+  setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
 }
 
 function initNewsletter() {
@@ -512,10 +561,15 @@ document.addEventListener("DOMContentLoaded", () => {
   initFilters();
   initNewsletter();
   initContact();
+  initSectionScroll();
   updateCartCount();
   renderCart();
 
-  if (document.querySelector("#product-grid")) renderProducts("all");
+  if (document.querySelector("#product-grid") && !location.hash.replace("#", "")) {
+    renderProducts("all");
+  } else if (document.querySelector("#product-grid") && !["drying","leather","home","dining","travel","apparel","grooming"].includes(location.hash.replace("#",""))) {
+    renderProducts("all");
+  }
   if (document.querySelector("#home-featured-grid")) {
     const featured = PRODUCTS.filter((p) => p.badge === "bestseller").slice(0, 6);
     const el = document.querySelector("#home-featured-grid");
@@ -523,6 +577,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   observeReveals();
+});
+
+window.addEventListener("hashchange", () => {
+  const hash = location.hash.replace("#", "");
+  const valid = ["all", "drying", "leather", "home", "dining", "travel", "apparel", "grooming"];
+  if (document.querySelector("#product-grid") && valid.includes(hash)) {
+    document.querySelector(`.filter-btn[data-filter="${hash}"]`)?.click();
+  } else {
+    const el = document.getElementById(hash);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 });
 
 window.DRYCO = { PRODUCTS, money, addToCart };

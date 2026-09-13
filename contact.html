@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — dry&co by TimTrades</title>
-  <meta name="description" content="Contact dry&co for orders, boutique wholesale and Cape collaborations.">
+  <meta name="description" content="Contact dry&co by TimTrades for orders, boutique wholesale and Cape collaborations.">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -13,9 +13,10 @@
       <a class="brand" href="index.html">DRY <span class="amp">&</span> CO.</a>
       <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="about.html">Our Story</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="shop.html#shop">Shop</a>
+        <a href="about.html#our-story">Our Story</a>
+        <a href="contact.html#contact" class="active">Contact</a>
+        <a href="index.html#collections">Collections</a>
       </nav>
       <div class="nav-actions">
         <button class="cart-btn" data-open-cart aria-label="Open bag">
@@ -27,15 +28,15 @@
     </div>
   </header>
 
-  <section class="page-hero">
+  <section class="page-hero" id="contact">
     <div class="container">
-      <div class="kicker" style="color:#a67c52">Contact</div>
+      <div class="kicker" style="color:#a67c52">Contact · dry&amp;co by TimTrades</div>
       <h1>Orders, wholesale &amp; press</h1>
       <p>Retail customers checkout on WhatsApp. Boutiques and stockists — talk to us directly.</p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="message">
     <div class="container" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:3rem;align-items:start">
       <form class="contact-form reveal" data-contact>
         <div>
@@ -57,29 +58,33 @@
           </select>
         </div>
         <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="Suburb, dog size, quantities…"></textarea>
+          <label for="message-field">Message</label>
+          <textarea id="message-field" name="message" required placeholder="Suburb, dog size, quantities…"></textarea>
         </div>
         <button class="btn btn-primary" type="submit">Send message</button>
       </form>
 
       <div class="info-cards reveal">
-        <div class="info-card">
+        <div class="info-card" id="orders">
           <h3>WhatsApp orders</h3>
-          <p>Add to bag on the site, then tap <strong>Order via WhatsApp</strong>. Replace the placeholder number in <code>assets/js/app.js</code> with Charne’s business line.</p>
+          <p>Add to bag on the site, then tap <strong>Order via WhatsApp</strong>. We confirm size and delivery by chat.</p>
+          <a href="shop.html#shop" class="btn btn-outline btn-sm" style="margin-top:0.8rem">Go to shop</a>
         </div>
-        <div class="info-card">
+        <div class="info-card" id="wholesale">
           <h3>Wholesale</h3>
-          <p>Suggested opening order: Dry Robe, Check Blanket, Collar+Lead, Bowls, Dry Clean. Trade pricing on request.</p>
+          <p>Opening set: Dry Robe, Check Blanket, Collar+Lead, Bowls, Dry Clean. Trade pricing on request.</p>
         </div>
-        <div class="info-card">
+        <div class="info-card" id="studio">
           <h3>Studio</h3>
           <p>Western Cape, South Africa<br>hello@dryandco.co.za<br>Mon–Fri · 09:00–16:00 SAST</p>
         </div>
-        <div class="info-card">
+        <div class="info-card" id="pulse">
           <img src="assets/images/touch.jpg" alt="Hand on golden coat" style="width:100%;height:180px;object-fit:cover;margin-bottom:0.8rem">
-          <h3>Pulse campaigns</h3>
-          <p>Share <a href="pulse.html" style="text-decoration:underline">pulse.html</a> as a lightweight landing link for Instagram ads and WhatsApp broadcasts.</p>
+          <h3>Our story</h3>
+          <p>dry&amp;co began with Milo. Read why every piece still carries that quiet promise.</p>
+          <a href="about.html#milo" style="text-decoration:underline">Read Milo’s story</a>
+          ·
+          <a href="pulse.html" style="text-decoration:underline">Pulse page</a>
         </div>
       </div>
     </div>
@@ -87,9 +92,32 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-bottom" style="border:none;padding:0">
-        <a class="brand brand--light" href="index.html">DRY <span class="amp">&</span> CO.</a>
+      <div class="footer-grid">
+        <div>
+          <a class="brand brand--light" href="index.html">DRY <span class="amp">&</span> CO.</a>
+          <p style="max-width:28ch;margin-top:0.5rem;font-size:0.92rem">dry&amp;co by TimTrades.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="shop.html#shop">All products</a>
+          <a href="shop.html#drying">Dry Ritual</a>
+          <a href="shop.html#home">Home &amp; Estate</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="about.html#our-story">Our story</a>
+          <a href="about.html#milo">Milo</a>
+          <a href="contact.html#wholesale">Wholesale</a>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="index.html#collections">Collections</a>
+          <a href="pulse.html">Pulse</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <span>© 2026 dry&amp;co · TimTrades</span>
+        <span>In memory of Milo</span>
       </div>
     </div>
   </footer>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shop — dry&co by TimTrades</title>
-  <meta name="description" content="Shop dry&co luxury dog products in South African Rands. Drying robes, leather, beds, blankets and grooming.">
+  <meta name="description" content="Shop dry&co by TimTrades — luxury dog products in South African Rands. Drying robes, leather, beds, blankets and grooming.">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -13,9 +13,10 @@
       <a class="brand" href="index.html">DRY <span class="amp">&</span> CO.</a>
       <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="shop.html" class="active">Shop</a>
-        <a href="about.html">Our Story</a>
-        <a href="contact.html">Contact</a>
+        <a href="shop.html#shop" class="active">Shop</a>
+        <a href="about.html#our-story">Our Story</a>
+        <a href="contact.html#contact">Contact</a>
+        <a href="index.html#collections">Collections</a>
       </nav>
       <div class="nav-actions">
         <button class="cart-btn" data-open-cart aria-label="Open bag">
@@ -27,35 +28,53 @@
     </div>
   </header>
 
-  <section class="page-hero">
+  <section class="page-hero" id="shop-top">
     <div class="container">
-      <div class="kicker" style="color:#a67c52">The collection</div>
+      <div class="kicker" style="color:#a67c52">The collection · dry&amp;co by TimTrades</div>
       <h1>Shop dry&amp;co</h1>
-      <p>Eighteen launch SKUs priced in Rands — chosen because they sell in the higher-end SA dog market and are practical to make or import.</p>
+      <p>Quiet luxury for living dogs — robes, leather, beds and home pieces priced in Rands. Choose a collection below.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:1.4rem">
+        <a class="btn btn-ghost btn-sm" href="#drying" style="border-color:rgba(255,255,255,0.4)">Dry Ritual</a>
+        <a class="btn btn-ghost btn-sm" href="#leather" style="border-color:rgba(255,255,255,0.4)">Leather Walk</a>
+        <a class="btn btn-ghost btn-sm" href="#home" style="border-color:rgba(255,255,255,0.4)">Home &amp; Estate</a>
+        <a class="btn btn-ghost btn-sm" href="#dining" style="border-color:rgba(255,255,255,0.4)">Dining</a>
+        <a class="btn btn-ghost btn-sm" href="#grooming" style="border-color:rgba(255,255,255,0.4)">Grooming</a>
+      </div>
     </div>
   </section>
 
   <section class="section" id="shop">
     <div class="container">
       <div class="filters" role="tablist" aria-label="Filter products">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="drying" id="drying">Dry Ritual</button>
-        <button class="filter-btn" data-filter="leather" id="leather">Leather</button>
-        <button class="filter-btn" data-filter="home" id="home">Home</button>
-        <button class="filter-btn" data-filter="dining">Dining</button>
-        <button class="filter-btn" data-filter="travel">Travel</button>
-        <button class="filter-btn" data-filter="apparel">Apparel</button>
-        <button class="filter-btn" data-filter="grooming">Grooming</button>
+        <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="drying" type="button">Dry Ritual</button>
+        <button class="filter-btn" data-filter="leather" type="button">Leather</button>
+        <button class="filter-btn" data-filter="home" type="button">Home</button>
+        <button class="filter-btn" data-filter="dining" type="button">Dining</button>
+        <button class="filter-btn" data-filter="travel" type="button">Travel</button>
+        <button class="filter-btn" data-filter="apparel" type="button">Apparel</button>
+        <button class="filter-btn" data-filter="grooming" type="button">Grooming</button>
       </div>
+
+      <!-- Anchor targets for collection deep-links -->
+      <div id="drying" class="shop-anchor" aria-hidden="true"></div>
+      <div id="leather" class="shop-anchor" aria-hidden="true"></div>
+      <div id="home" class="shop-anchor" aria-hidden="true"></div>
+      <div id="dining" class="shop-anchor" aria-hidden="true"></div>
+      <div id="travel" class="shop-anchor" aria-hidden="true"></div>
+      <div id="apparel" class="shop-anchor" aria-hidden="true"></div>
+      <div id="grooming" class="shop-anchor" aria-hidden="true"></div>
+
       <div class="product-grid" id="product-grid"></div>
     </div>
   </section>
 
-  <section class="section" style="padding-top:0">
+  <section class="section" id="first-run" style="padding-top:0">
     <div class="container reveal" style="background:var(--white);border:1px solid var(--line);padding:2rem">
-      <div class="kicker">Trade note</div>
-      <h2 style="font-family:var(--font-display);font-weight:400;font-size:1.8rem;margin-bottom:0.7rem">Suggested first production run</h2>
-      <p style="color:rgba(26,39,64,0.75);max-width:60ch">Start with: Cape Dry Robe, Estate Check Blanket, Karoo Collar + Lead set, Stone Pair Bowls, Constantia Bed (made-to-order), No-Bath Dry Clean. These six cover Instagram heroes, walk-in gifts and repeat consumables.</p>
+      <div class="kicker">For the dogs still here</div>
+      <h2 style="font-family:var(--font-display);font-weight:400;font-size:1.8rem;margin-bottom:0.7rem">Start with the pieces that matter most</h2>
+      <p style="color:rgba(26,39,64,0.75);max-width:60ch;margin-bottom:1rem">Cape Dry Robe, Estate Check Blanket, Karoo Collar + Lead, Stone Pair Bowls, Constantia Bed, No-Bath Dry Clean — care you can hold in your hands.</p>
+      <a class="btn btn-outline btn-sm" href="about.html#milo">Why we make these</a>
     </div>
   </section>
 
@@ -64,26 +83,30 @@
       <div class="footer-grid">
         <div>
           <a class="brand brand--light" href="index.html">DRY <span class="amp">&</span> CO.</a>
-          <p style="max-width:28ch;margin-top:0.5rem;font-size:0.92rem">Higher-end dog essentials from the Cape.</p>
+          <p style="max-width:28ch;margin-top:0.5rem;font-size:0.92rem">dry&amp;co by TimTrades.</p>
         </div>
         <div>
           <h4>Shop</h4>
-          <a href="shop.html">All products</a>
-          <a href="contact.html">Wholesale</a>
+          <a href="shop.html#shop">All products</a>
+          <a href="shop.html#drying">Dry Ritual</a>
+          <a href="shop.html#leather">Leather Walk</a>
+          <a href="shop.html#home">Home &amp; Estate</a>
         </div>
         <div>
           <h4>Company</h4>
-          <a href="about.html">Our story</a>
-          <a href="GO-LIVE.html">Go live guide</a>
+          <a href="about.html#our-story">Our story</a>
+          <a href="about.html#milo">Milo</a>
+          <a href="contact.html#contact">Contact</a>
         </div>
         <div>
-          <h4>Contact</h4>
-          <a href="mailto:hello@dryandco.co.za">hello@dryandco.co.za</a>
+          <h4>Explore</h4>
+          <a href="index.html#collections">Collections</a>
+          <a href="pulse.html">Pulse page</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© 2026 dry&amp;co · TimTrades</span>
-        <span>Prices in Rands (ZAR)</span>
+        <span>In memory of Milo</span>
       </div>
     </div>
   </footer>
@@ -102,14 +125,14 @@
   </aside>
   <div class="toast" role="status"></div>
   <script src="assets/js/app.js"></script>
-  <script>
-    // Deep-link filters from hash
-    document.addEventListener("DOMContentLoaded", () => {
-      const hash = location.hash.replace("#", "");
-      if (!hash) return;
-      const btn = document.querySelector(`.filter-btn[data-filter="${hash}"]`);
-      if (btn) btn.click();
-    });
-  </script>
+  <style>
+    .shop-anchor {
+      position: relative;
+      top: -100px;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+    }
+  </style>
 </body>
 </html>

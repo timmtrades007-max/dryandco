@@ -1,4 +1,4 @@
-# dry&co — luxury dog brand website
+﻿# dry&co — luxury dog brand website
 
 Cape-born higher-end dog products. Full static site ready to open locally or deploy.
 

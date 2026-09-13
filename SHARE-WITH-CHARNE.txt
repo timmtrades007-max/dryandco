@@ -1,20 +1,17 @@
-﻿dry&co by TimTrades — share with Charne
-=======================================
+﻿dry&co — Vercel link (no GitHub username)
+=====================================================
 
-SEND THIS LINK:
-https://timmtrades007-max.github.io/dryandco/
+SHARE WITH CHARNE NOW:
+https://temporary-turbo-redwood-u0r399o.vercel.app
 
-Also useful:
-Pulse: https://timmtrades007-max.github.io/dryandco/pulse.html
-Shop:  https://timmtrades007-max.github.io/dryandco/shop.html
-About: https://timmtrades007-max.github.io/dryandco/about.html
+CLAIM FOR A PERMANENT FREE DOMAIN (do this in the browser that just opened):
+https://vercel.com/claim-deployment?code=6b7bc090-1b12-4c4b-9c4e-d60aa437d4ab
 
-WhatsApp message:
----
-Hi Charne — here's the dry&co by TimTrades website draft:
-https://timmtrades007-max.github.io/dryandco/
+After claim → Project Settings → rename project to **dryandco**
+Your permanent free URL becomes:
+https://dryandco.vercel.app
 
-Please review Home, Shop, Pulse and About, then tell us what to change.
----
-
-Repo: https://github.com/timmtrades007-max/dryandco
+Pages:
+Shop: https://temporary-turbo-redwood-u0r399o.vercel.app/shop.html
+Story: https://temporary-turbo-redwood-u0r399o.vercel.app/about.html#milo
+Pulse: https://temporary-turbo-redwood-u0r399o.vercel.app/pulse.html

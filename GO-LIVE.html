@@ -1,148 +1,148 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-ZA">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Go live &amp; Pulse — dry&co</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <style>
-    .guide { max-width: 720px; }
-    .guide h2 {
-      font-family: var(--font-display);
-      font-weight: 400;
-      font-size: 1.9rem;
-      margin: 2.2rem 0 0.7rem;
-    }
-    .guide ol, .guide ul { margin: 0.6rem 0 1rem 1.2rem; color: rgba(26,39,64,0.8); }
-    .guide li { margin-bottom: 0.45rem; }
-    .guide code {
-      background: var(--stone);
-      padding: 0.1rem 0.35rem;
-      font-size: 0.88em;
-    }
-    .guide pre {
-      background: var(--navy-deep);
-      color: #f7f4ef;
-      padding: 1rem 1.2rem;
-      overflow: auto;
-      font-size: 0.85rem;
-      margin: 0.8rem 0 1.2rem;
-    }
-    .callout {
-      border-left: 3px solid var(--leather);
-      padding: 1rem 1.2rem;
-      background: white;
-      border: 1px solid var(--line);
-      border-left-width: 3px;
-      margin: 1.2rem 0;
-    }
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Go live &amp; Pulse — dry&co</title>
+ <link rel="stylesheet" href="assets/css/styles.css">
+ <style>
+ .guide { max-width: 720px; }
+ .guide h2 {
+ font-family: var(--font-display);
+ font-weight: 400;
+ font-size: 1.9rem;
+ margin: 2.2rem 0 0.7rem;
+ }
+ .guide ol, .guide ul { margin: 0.6rem 0 1rem 1.2rem; color: rgba(26,39,64,0.8); }
+ .guide li { margin-bottom: 0.45rem; }
+ .guide code {
+ background: var(--stone);
+ padding: 0.1rem 0.35rem;
+ font-size: 0.88em;
+ }
+ .guide pre {
+ background: var(--navy-deep);
+ color: #f7f4ef;
+ padding: 1rem 1.2rem;
+ overflow: auto;
+ font-size: 0.85rem;
+ margin: 0.8rem 0 1.2rem;
+ }
+ .callout {
+ border-left: 3px solid var(--leather);
+ padding: 1rem 1.2rem;
+ background: white;
+ border: 1px solid var(--line);
+ border-left-width: 3px;
+ margin: 1.2rem 0;
+ }
+ </style>
 </head>
 <body>
-  <header class="site-header solid">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html">DRY <span class="amp">&</span> CO.</a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="pulse.html">Pulse</a>
-        <a href="GO-LIVE.html" class="active">Go live</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn btn-outline btn-sm" href="index.html">Back to site</a>
-      </div>
-    </div>
-  </header>
+ <header class="site-header solid">
+ <div class="container nav-inner">
+ <a class="brand" href="index.html">DRY <span class="amp">&</span> CO.</a>
+ <nav class="nav-links">
+ <a href="index.html">Home</a>
+ <a href="shop.html">Shop</a>
+ <a href="pulse.html">Pulse</a>
+ <a href="GO-LIVE.html" class="active">Go live</a>
+ </nav>
+ <div class="nav-actions">
+ <a class="btn btn-outline btn-sm" href="index.html">Back to site</a>
+ </div>
+ </div>
+ </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <div class="kicker" style="color:#a67c52">Launch guide</div>
-      <h1>Make dry&amp;co live + run a Pulse page</h1>
-      <p>Your full site is already built locally. Follow these steps to open it on this PC, put it on the internet, and use the Pulse landing for ads.</p>
-    </div>
-  </section>
+ <section class="page-hero">
+ <div class="container">
+ <div class="kicker" style="color:#a67c52">Launch guide</div>
+ <h1>Make dry&amp;co live + run a Pulse page</h1>
+ <p>Your full site is already built locally. Follow these steps to open it on this PC, put it on the internet, and use the Pulse landing for ads.</p>
+ </div>
+ </section>
 
-  <section class="section">
-    <div class="container guide">
-      <div class="callout">
-        <strong>Site folder:</strong> <code>C:\Users\timme\Downloads\dryco-website\</code><br>
-        Open <code>index.html</code> for the full brand site · <code>pulse.html</code> for campaigns.
-      </div>
+ <section class="section">
+ <div class="container guide">
+ <div class="callout">
+ <strong>Site folder:</strong> <code>C:\Users\timme\Downloads\dryco-website\</code><br>
+ Open <code>index.html</code> for the full brand site · <code>pulse.html</code> for campaigns.
+ </div>
 
-      <h2>1. Open it locally (now)</h2>
-      <ol>
-        <li>Double-click <code>index.html</code> — or run a tiny local server (cleaner for testing):</li>
-      </ol>
-      <pre>cd C:\Users\timme\Downloads\dryco-website
+ <h2>1. Open it locally (now)</h2>
+ <ol>
+ <li>Double-click <code>index.html</code> — or run a tiny local server (cleaner for testing):</li>
+ </ol>
+ <pre>cd C:\Users\timme\Downloads\dryco-website
 python -m http.server 8080</pre>
-      <p>Then visit <code>http://localhost:8080</code> in your browser.</p>
+ <p>Then visit <code>http://localhost:8080</code> in your browser.</p>
 
-      <h2>2. Before public launch — 3 edits</h2>
-      <ol>
-        <li><strong>WhatsApp number</strong> — in <code>assets/js/app.js</code> find <code>wa.me/27600000000</code> and replace with Charne’s real number (country code, no + or spaces). Also update the link on <code>pulse.html</code> and phone/email in the footer.</li>
-        <li><strong>Domain email</strong> — swap <code>hello@dryandco.co.za</code> once the domain is yours (or use a Gmail temporarily).</li>
-        <li><strong>Product photos</strong> — lifestyle frames from Charne’s video are in place; add flat-lays of real stock as you produce them.</li>
-      </ol>
+ <h2>2. Before public launch — 3 edits</h2>
+ <ol>
+ <li><strong>WhatsApp number</strong> — in <code>assets/js/app.js</code> find <code>wa.me/27600000000</code> and replace with Charne’s real number (country code, no + or spaces). Also update the link on <code>pulse.html</code> and phone/email in the footer.</li>
+ <li><strong>Domain email</strong> — swap <code>hello@dryandco.co.za</code> once the domain is yours (or use a Gmail temporarily).</li>
+ <li><strong>Product photos</strong> — lifestyle frames from Charne’s video are in place; add flat-lays of real stock as you produce them.</li>
+ </ol>
 
-      <h2>3. Put the full website live (free, ~2 minutes)</h2>
-      <p><strong>Option A — Netlify Drop (easiest)</strong></p>
-      <ol>
-        <li>Go to <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">app.netlify.com/drop</a></li>
-        <li>Drag the whole <code>dryco-website</code> folder onto the page</li>
-        <li>You get a live URL instantly (e.g. <code>something.netlify.app</code>)</li>
-        <li>Add custom domain later: <code>dryandco.co.za</code> via Netlify Domain settings + your registrar (xneelo, Domains.co.za, Cloudflare, etc.)</li>
-      </ol>
-      <p><strong>Option B — Cloudflare Pages / Vercel / GitHub Pages</strong> — same idea: upload or connect a Git repo of this folder; set the publish directory to the site root.</p>
-      <p><strong>Option C — SA host</strong> — upload via cPanel File Manager or FTP to <code>public_html</code> on xneelo, Afrihost, Hostinger, etc.</p>
+ <h2>3. Put the full website live (free, ~2 minutes)</h2>
+ <p><strong>Option A — Netlify Drop (easiest)</strong></p>
+ <ol>
+ <li>Go to <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">app.netlify.com/drop</a></li>
+ <li>Drag the whole <code>dryco-website</code> folder onto the page</li>
+ <li>You get a live URL instantly (e.g. <code>something.netlify.app</code>)</li>
+ <li>Add custom domain later: <code>dryandco.co.za</code> via Netlify Domain settings + your registrar (xneelo, Domains.co.za, Cloudflare, etc.)</li>
+ </ol>
+ <p><strong>Option B — Cloudflare Pages / Vercel / GitHub Pages</strong> — same idea: upload or connect a Git repo of this folder; set the publish directory to the site root.</p>
+ <p><strong>Option C — SA host</strong> — upload via cPanel File Manager or FTP to <code>public_html</code> on xneelo, Afrihost, Hostinger, etc.</p>
 
-      <h2>4. What is the Pulse website?</h2>
-      <p><code>pulse.html</code> is a single-screen campaign landing page — faster load, one message, four hero prices, WhatsApp CTA. Use it when you need a “pulse” of traffic from Instagram ads, WhatsApp Status, or broadcast lists without sending people into the full shop maze.</p>
-      <ul>
-        <li><strong>Full site:</strong> <code>/</code> or <code>index.html</code> — brand + catalogue</li>
-        <li><strong>Pulse:</strong> <code>/pulse.html</code> — ads &amp; chat conversions</li>
-      </ul>
-      <div class="callout">
-        After Netlify deploy, your Pulse link looks like:<br>
-        <code>https://YOUR-SITE.netlify.app/pulse.html</code><br>
-        Put that URL in Meta Ads, Instagram bio during launches, and WhatsApp broadcasts.
-      </div>
+ <h2>4. What is the Pulse website?</h2>
+ <p><code>pulse.html</code> is a single-screen campaign landing page — faster load, one message, four hero prices, WhatsApp CTA. Use it when you need a “pulse” of traffic from Instagram ads, WhatsApp Status, or broadcast lists without sending people into the full shop maze.</p>
+ <ul>
+ <li><strong>Full site:</strong> <code>/</code> or <code>index.html</code> — brand + catalogue</li>
+ <li><strong>Pulse:</strong> <code>/pulse.html</code> — ads &amp; chat conversions</li>
+ </ul>
+ <div class="callout">
+ After Netlify deploy, your Pulse link looks like:<br>
+ <code>https://YOUR-SITE.netlify.app/pulse.html</code><br>
+ Put that URL in Meta Ads, Instagram bio during launches, and WhatsApp broadcasts.
+ </div>
 
-      <h2>5. Pulse marketing rhythm (recommended)</h2>
-      <ol>
-        <li>Post Charne’s film + site link on Instagram / TikTok</li>
-        <li>Run a small Meta ads Pulse campaign to <code>pulse.html</code> (Dry Robe + Blanket offer)</li>
-        <li>All checkouts go WhatsApp → confirm size → Send Yoco / PayFast / EFT link</li>
-        <li>Weekly “pulse”: one Story, one product, one WhatsApp broadcast</li>
-      </ol>
+ <h2>5. Pulse marketing rhythm (recommended)</h2>
+ <ol>
+ <li>Post Charne’s film + site link on Instagram / TikTok</li>
+ <li>Run a small Meta ads Pulse campaign to <code>pulse.html</code> (Dry Robe + Blanket offer)</li>
+ <li>All checkouts go WhatsApp → confirm size → Send Yoco / PayFast / EFT link</li>
+ <li>Weekly “pulse”: one Story, one product, one WhatsApp broadcast</li>
+ </ol>
 
-      <h2>6. Domain checklist (South Africa)</h2>
-      <ol>
-        <li>Register <code>dryandco.co.za</code> or <code>dryandco.com</code></li>
-        <li>Point DNS to Netlify / Cloudflare / your host</li>
-        <li>Turn on HTTPS (automatic on Netlify/Cloudflare)</li>
-        <li>Create Instagram @dryandco and WhatsApp Business profile with the logo end-card</li>
-      </ol>
+ <h2>6. Domain checklist (South Africa)</h2>
+ <ol>
+ <li>Register <code>dryandco.co.za</code> or <code>dryandco.com</code></li>
+ <li>Point DNS to Netlify / Cloudflare / your host</li>
+ <li>Turn on HTTPS (automatic on Netlify/Cloudflare)</li>
+ <li>Create Instagram @dryandco and WhatsApp Business profile with the logo end-card</li>
+ </ol>
 
-      <h2>7. Next upgrades (when you’re ready)</h2>
-      <ul>
-        <li>Yoco or PayFast payment links</li>
-        <li>Shopify / WooCommerce if order volume grows</li>
-        <li>Professional product photography of first stock batch</li>
-        <li>Google Business Profile for Cape pop-ups</li>
-      </ul>
+ <h2>7. Next upgrades (when you’re ready)</h2>
+ <ul>
+ <li>Yoco or PayFast payment links</li>
+ <li>Shopify / WooCommerce if order volume grows</li>
+ <li>Professional product photography of first stock batch</li>
+ <li>Google Business Profile for Cape pop-ups</li>
+ </ul>
 
-      <p style="margin-top:2.5rem">
-        <a class="btn btn-primary" href="index.html">Open full site</a>
-        <a class="btn btn-outline" href="pulse.html" style="margin-left:0.5rem">Open Pulse page</a>
-      </p>
-    </div>
-  </section>
+ <p style="margin-top:2.5rem">
+ <a class="btn btn-primary" href="index.html">Open full site</a>
+ <a class="btn btn-outline" href="pulse.html" style="margin-left:0.5rem">Open Pulse page</a>
+ </p>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container footer-bottom" style="border:none">
-      <span>© 2026 dry&amp;co · TimTrades</span>
-      <a href="index.html">Home</a>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container footer-bottom" style="border:none">
+ <span>© 2026 dry&amp;co</span>
+ <a href="index.html">Home</a>
+ </div>
+ </footer>
 </body>
 </html>

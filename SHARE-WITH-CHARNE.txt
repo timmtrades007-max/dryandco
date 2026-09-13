@@ -1,13 +1,20 @@
-﻿dry&co — share with Charne
-==========================
-Review site (GitHub Pages — permanent):
-https://timmtrades007-max.github.io/dryco-charne-review/
+﻿dry&co by TimTrades — share with Charne
+=======================================
 
-Pulse: https://timmtrades007-max.github.io/dryco-charne-review/pulse.html
-Shop:  https://timmtrades007-max.github.io/dryco-charne-review/shop.html
+SEND THIS LINK:
+https://timmtrades007-max.github.io/dryandco/
 
-WhatsApp copy-paste:
-Hi Charne — here's the dry&co website draft to review on your phone:
-https://timmtrades007-max.github.io/dryco-charne-review/
+Also useful:
+Pulse: https://timmtrades007-max.github.io/dryandco/pulse.html
+Shop:  https://timmtrades007-max.github.io/dryandco/shop.html
+About: https://timmtrades007-max.github.io/dryandco/about.html
 
-Please check Home, Shop (all product photos), Pulse page, and About. Tell us what to change.
+WhatsApp message:
+---
+Hi Charne — here's the dry&co by TimTrades website draft:
+https://timmtrades007-max.github.io/dryandco/
+
+Please review Home, Shop, Pulse and About, then tell us what to change.
+---
+
+Repo: https://github.com/timmtrades007-max/dryandco

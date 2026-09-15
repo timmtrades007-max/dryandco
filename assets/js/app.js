@@ -1,6 +1,7 @@
 ﻿/* dry&co — sellable catalogue, cart, quick-view, bundles */
 
-const FREE_SHIP = 1200;
+const FREE_SHIP = (typeof SITE !== "undefined" && SITE.freeShipZar) || 1200;
+const WA_NUMBER = (typeof SITE !== "undefined" && SITE.whatsapp) || "27600000000";
 
 const PRODUCTS = [
   {
@@ -1147,7 +1148,7 @@ function whatsappCheckout() {
   const text = encodeURIComponent(
     `Hi dry&co — I’d like to order:\n\n${lines.join("\n")}\n\nTotal: ${money(total)}\n${ship}\n\nDelivery suburb: `
   );
-  window.open(`https://wa.me/27600000000?text=${text}`, "_blank");
+  window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, "_blank");
 }
 
 function waProduct(id, size) {
@@ -1156,7 +1157,7 @@ function waProduct(id, size) {
   const text = encodeURIComponent(
     `Hi dry&co — I’d like the ${p.name}${size ? ` in size ${size}` : ""} (${money(p.price)}).\n\nDelivery suburb: `
   );
-  window.open(`https://wa.me/27600000000?text=${text}`, "_blank");
+  window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, "_blank");
 }
 
 document.addEventListener("click", (e) => {
@@ -1207,6 +1208,9 @@ document.addEventListener("click", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  if (!document.querySelector(".announce")) {
+    document.documentElement.style.setProperty("--announce-h", "0px");
+  }
   initHeader();
   initFilters();
   initNewsletter();

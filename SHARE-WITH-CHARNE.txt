@@ -1,17 +1,10 @@
-﻿dry&co — Vercel link (no GitHub username)
-=====================================================
+﻿USE THIS DOMAIN:
+https://dryco-website.vercel.app/
 
-SHARE WITH CHARNE NOW:
-https://temporary-turbo-redwood-u0r399o.vercel.app
+To update it with the latest sellable site:
+1. Open https://vercel.com/dashboard
+2. Open project dryco-website
+3. Deployments → Redeploy  OR  drag folder C:\Users\timme\Downloads\dryco-website
+4. Or connect GitHub repo timmtrades007-max/dryandco and enable auto-deploy from main
 
-CLAIM FOR A PERMANENT FREE DOMAIN (do this in the browser that just opened):
-https://vercel.com/claim-deployment?code=6b7bc090-1b12-4c4b-9c4e-d60aa437d4ab
-
-After claim → Project Settings → rename project to **dryandco**
-Your permanent free URL becomes:
-https://dryandco.vercel.app
-
-Pages:
-Shop: https://temporary-turbo-redwood-u0r399o.vercel.app/shop.html
-Story: https://temporary-turbo-redwood-u0r399o.vercel.app/about.html#milo
-Pulse: https://temporary-turbo-redwood-u0r399o.vercel.app/pulse.html
+If you want Cursor to deploy for you: complete Vercel login when asked.

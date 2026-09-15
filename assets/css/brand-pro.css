@@ -1,4 +1,4 @@
-﻿/* dry&co â€” sellability layer */
+/* dry&co â€” sellability layer */
 
 .announce {
   position: fixed;
@@ -267,7 +267,7 @@
   z-index: -1;
 }
 
-.gift-card:hover img { transform: scale(1.06); }
+.gift-card:hover img { transform: scale(1.02); }
 
 .gift-card h3 {
   font-family: var(--font-display);

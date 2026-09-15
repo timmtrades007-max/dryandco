@@ -13,11 +13,18 @@ GO-LIVE SWITCHES (edit these)
 ALREADY READY
 - Sharp hero + lifestyle images
 - Announce bar no longer overlaps nav
-- Shipping / Returns / Privacy pages
+- Shipping / Returns / Privacy / FAQ pages
+- Family runbook (runbook.html) for the children
 - robots.txt + sitemap.xml
 - Free shipping threshold R1200
-- WhatsApp checkout + sets + cats + dogs
+- WhatsApp checkout + sets + dogs + full cats range
 - 30-day guarantee messaging
+- MESSAGE_FOR_CHARNE.txt ready to send
+
+CATS RANGE (16+)
+Cave, tower, fountain, litter cabinet, collar, hammock, groom set,
+carrier, tunnel, diner, blanket, wall shelves, catnip, scratcher, harness
++ 3 cat sets
 
 CHARNE REVIEW CHECKLIST
 [ ] Home hero looks sharp

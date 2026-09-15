@@ -533,6 +533,166 @@ const PRODUCTS = [
     image: "assets/images/products/product-denim-jacket.png",
     motif: "DENIM",
     pairsWith: ["bandana", "leather-collar"]
+  },
+  {
+    id: "cat-cave",
+    name: "Cloud Cave Nest",
+    category: "cats",
+    catLabel: "Cats",
+    price: 890,
+    compare: 1150,
+    badge: "bestseller",
+    rating: 4.9,
+    reviews: 86,
+    stock: 14,
+    hook: "The hideaway that looks like furniture.",
+    desc: "Bouclé cave nest with arched opening and leather patch. Cats disappear into it. Guests ask where you bought the ottoman.",
+    colors: "Oatmeal",
+    sizes: ["One size"],
+    source: "Local upholstery",
+    image: "assets/images/products/product-cat-cave.png",
+    motif: "CAVE",
+    pairsWith: ["cat-toys", "cat-groom"]
+  },
+  {
+    id: "cat-tree",
+    name: "Oak Climb Tower",
+    category: "cats",
+    catLabel: "Cats",
+    price: 2490,
+    compare: 3200,
+    badge: "bestseller",
+    rating: 4.9,
+    reviews: 52,
+    stock: 7,
+    hook: "A climbing tree that belongs in the living room.",
+    desc: "Minimal oak tower with sisal posts and soft platforms. Vertical play without the ugly carpet catastrophe.",
+    colors: "Natural oak / oatmeal",
+    sizes: ["Tall"],
+    source: "Local joinery",
+    image: "assets/images/products/product-cat-tree.png",
+    motif: "TOWER",
+    pairsWith: ["cat-cave", "cat-hammock"]
+  },
+  {
+    id: "cat-fountain",
+    name: "Quiet Flow Fountain",
+    category: "cats",
+    catLabel: "Cats",
+    price: 680,
+    compare: 860,
+    badge: "bestseller",
+    rating: 5.0,
+    reviews: 119,
+    stock: 18,
+    hook: "Hydration that looks like ceramics.",
+    desc: "Matte ivory ceramic fountain. Gentle flow cats prefer. The dining piece that ends plastic bowl shame.",
+    colors: "Ivory",
+    sizes: ["One"],
+    source: "Local ceramics",
+    image: "assets/images/products/product-cat-fountain.png",
+    motif: "FLOW",
+    pairsWith: ["cat-groom", "rain-candle"]
+  },
+  {
+    id: "cat-toys",
+    name: "Midnight Hunt Set",
+    category: "cats",
+    catLabel: "Cats",
+    price: 280,
+    compare: 360,
+    badge: "new",
+    rating: 4.8,
+    reviews: 73,
+    stock: 40,
+    hook: "Felt mice + sisal scratch — gift-ready.",
+    desc: "Soft hunt toys and a compact scratch pad in estate colours. Play that still looks styled on the rug.",
+    colors: "Navy · Sand · Olive",
+    sizes: ["Set"],
+    source: "Local craft",
+    image: "assets/images/products/product-cat-toys.png",
+    motif: "HUNT",
+    pairsWith: ["cat-cave", "cat-collar"]
+  },
+  {
+    id: "cat-collar",
+    name: "Velvet Breakaway Collar",
+    category: "cats",
+    catLabel: "Cats",
+    price: 220,
+    compare: 290,
+    badge: "bestseller",
+    rating: 4.9,
+    reviews: 158,
+    stock: 45,
+    hook: "Safety breakaway. Tiny brass bell. Quiet luxury.",
+    desc: "Soft navy velvet with secure breakaway clasp and engraved charm. The collar that photographs like jewellery.",
+    colors: "Navy velvet",
+    sizes: ["S", "M"],
+    source: "Local sew",
+    image: "assets/images/products/product-cat-collar.png",
+    motif: "VELVET",
+    pairsWith: ["name-tag", "cat-toys"]
+  },
+  {
+    id: "litter-cabinet",
+    name: "Hidden Litter Cabinet",
+    category: "cats",
+    catLabel: "Cats",
+    price: 2190,
+    compare: 2790,
+    badge: "new",
+    rating: 4.8,
+    reviews: 41,
+    stock: 6,
+    hook: "Litter, disguised as a sideboard.",
+    desc: "White oak cabinet that hides the box completely. The product multi-cat apartments wait for.",
+    colors: "White oak",
+    sizes: ["Standard"],
+    source: "Local joinery",
+    image: "assets/images/products/product-litter-cabinet.png",
+    motif: "HIDE",
+    pairsWith: ["cat-fountain", "rain-candle"]
+  },
+  {
+    id: "cat-hammock",
+    name: "Sunledge Hammock",
+    category: "cats",
+    catLabel: "Cats",
+    price: 560,
+    compare: 720,
+    badge: "bestseller",
+    rating: 4.9,
+    reviews: 97,
+    stock: 22,
+    hook: "Window real estate for cats who run the house.",
+    desc: "Bolstered oatmeal sill hammock. Soft ledge energy. The nap spot they fight over.",
+    colors: "Oatmeal",
+    sizes: ["M", "L"],
+    source: "Local sew",
+    image: "assets/images/products/product-cat-hammock.png",
+    motif: "LEDGE",
+    pairsWith: ["cat-cave", "cat-tree"]
+  },
+  {
+    id: "cat-groom",
+    name: "Linen Coat Ritual",
+    category: "cats",
+    catLabel: "Cats",
+    price: 390,
+    compare: 490,
+    badge: "new",
+    rating: 4.8,
+    reviews: 64,
+    stock: 28,
+    hook: "Mist + brush. Less fur on the sofa.",
+    desc: "Cat calm mist and soft wooden brush set. The grooming ritual that keeps coats glossy and couches survivable.",
+    colors: "Amber / wood",
+    sizes: ["Set"],
+    source: "Filled & finished SA",
+    image: "assets/images/products/product-cat-groom.png",
+    motif: "GROOM",
+    pairsWith: ["cat-fountain", "cat-collar"]
   }
 ];
 
@@ -576,6 +736,16 @@ const BUNDLES = [
     compare: 880,
     save: 90,
     image: "assets/images/products/product-rain-candle.png"
+  },
+  {
+    id: "bundle-cats",
+    name: "Cat Estate Set",
+    tagline: "Cave + fountain + velvet collar. Instant cat household.",
+    items: ["cat-cave", "cat-fountain", "cat-collar"],
+    price: 1620,
+    compare: 1790,
+    save: 170,
+    image: "assets/images/products/product-cat-cave.png"
   }
 ];
 
@@ -583,7 +753,8 @@ const REVIEWS = [
   { name: "Sarah M.", place: "Constantia", text: "The dry robe is the first pet product that doesn’t look like a joke in our hallway. Milo would have loved this.", stars: 5 },
   { name: "James K.", place: "Stellenbosch", text: "Bought the collar and lead set. People stop us on walks. Worth every rand.", stars: 5 },
   { name: "Anika P.", place: "Sea Point", text: "Estate blanket lives on the sofa permanently. Guests think it’s ours. It is — for the dog.", stars: 5 },
-  { name: "Thandi R.", place: "Parkhurst", text: "Finally a brand that understands wet Cape weather and good interiors.", stars: 5 }
+  { name: "Thandi R.", place: "Parkhurst", text: "Finally a brand that understands wet Cape weather and good interiors.", stars: 5 },
+  { name: "Lila N.", place: "Illovo", text: "The Cloud Cave is the only cat bed that doesn’t ruin the lounge. Our Siamese lives in it.", stars: 5 }
 ];
 
 const CART_KEY = "dryco_cart_v2";
@@ -890,7 +1061,7 @@ function initHeader() {
 }
 
 function initFilters() {
-  const valid = ["all", "drying", "leather", "home", "dining", "travel", "apparel", "grooming"];
+  const valid = ["all", "drying", "leather", "home", "dining", "travel", "apparel", "grooming", "cats"];
   let sort = "featured";
 
   function applyFilter(filter, updateHash = true) {
@@ -913,7 +1084,7 @@ function initFilters() {
     applyFilter(active, false);
   });
 
-  document.querySelectorAll('a[href^="#drying"], a[href^="#leather"], a[href^="#home"], a[href^="#dining"], a[href^="#travel"], a[href^="#apparel"], a[href^="#grooming"], a[href="#shop"]').forEach((a) => {
+  document.querySelectorAll('a[href^="#drying"], a[href^="#leather"], a[href^="#home"], a[href^="#dining"], a[href^="#travel"], a[href^="#apparel"], a[href^="#grooming"], a[href^="#cats"], a[href="#shop"]').forEach((a) => {
     a.addEventListener("click", (e) => {
       if (!document.querySelector("#product-grid")) return;
       const hash = (a.getAttribute("href") || "").replace("#", "") || "shop";
@@ -1049,7 +1220,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (document.querySelector("#product-grid")) {
     const hash = location.hash.replace("#", "");
-    const valid = ["drying", "leather", "home", "dining", "travel", "apparel", "grooming"];
+    const valid = ["drying", "leather", "home", "dining", "travel", "apparel", "grooming", "cats"];
     if (!valid.includes(hash)) renderProducts("all");
   }
   if (document.querySelector("#home-featured-grid")) {
@@ -1066,12 +1237,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const featured = hotIds.map((id) => PRODUCTS.find((p) => p.id === id)).filter(Boolean);
     document.querySelector("#home-featured-grid").innerHTML = featured.map(productCardHTML).join("");
   }
+  if (document.querySelector("#cats-grid")) {
+    const cats = PRODUCTS.filter((p) => p.category === "cats");
+    document.querySelector("#cats-grid").innerHTML = cats.map(productCardHTML).join("");
+  }
   observeReveals();
 });
 
 window.addEventListener("hashchange", () => {
   const hash = location.hash.replace("#", "");
-  const valid = ["all", "drying", "leather", "home", "dining", "travel", "apparel", "grooming"];
+  const valid = ["all", "drying", "leather", "home", "dining", "travel", "apparel", "grooming", "cats"];
   if (document.querySelector("#product-grid") && valid.includes(hash)) {
     document.querySelector(`.filter-btn[data-filter="${hash}"]`)?.click();
   } else {

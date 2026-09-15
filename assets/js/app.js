@@ -1,33 +1,47 @@
-﻿/* dry&co â€” catalogue, cart, interactions */
+﻿/* dry&co — sellable catalogue, cart, quick-view, bundles */
+
+const FREE_SHIP = 1200;
 
 const PRODUCTS = [
   {
     id: "dry-robe-sand",
     name: "Cape Dry Robe",
     category: "drying",
-    catLabel: "Drying",
+    catLabel: "Dry Ritual",
     price: 690,
+    compare: 890,
     badge: "bestseller",
-    desc: "Double-layer microfibre robe that drinks water after beach, bath or pool. Machine washable. Made for SA sun & splash.",
+    rating: 4.9,
+    reviews: 128,
+    stock: 14,
+    hook: "The robe that started the brand.",
+    desc: "Double-layer microfibre that drinks water after beach, bath or pool. Soft enough for sofa naps. The piece customers reorder for every dog in the house.",
     colors: "Sand / Navy trim",
-    sizes: "S Â· M Â· L Â· XL",
-    source: "Local sew Â· Cape Town",
+    sizes: ["S", "M", "L", "XL"],
+    source: "Sewn in Cape Town",
     image: "assets/images/products/product-dry-robe-sand.png",
-    motif: "ROBE"
+    motif: "ROBE",
+    pairsWith: ["towel-set", "dry-shampoo"]
   },
   {
     id: "dry-robe-navy",
     name: "Harbour Dry Coat",
     category: "drying",
-    catLabel: "Drying",
+    catLabel: "Dry Ritual",
     price: 790,
+    compare: 990,
     badge: "new",
-    desc: "Longer coverage coat with leather badge. Ideal for wet Labradors and muddy walks home.",
+    rating: 4.8,
+    reviews: 46,
+    stock: 9,
+    hook: "Longer coverage. Leather badge. Mud walks sorted.",
+    desc: "Extended dry coat with leather DRY & CO. badge — built for wet Labradors and the walk home.",
     colors: "Navy",
-    sizes: "S Â· M Â· L Â· XL",
-    source: "Local sew Â· Cape Town",
+    sizes: ["S", "M", "L", "XL"],
+    source: "Sewn in Cape Town",
     image: "assets/images/products/product-dry-robe-navy.png",
-    motif: "COAT"
+    motif: "COAT",
+    pairsWith: ["boot-liner", "treat-pouch"]
   },
   {
     id: "check-blanket",
@@ -35,13 +49,19 @@ const PRODUCTS = [
     category: "home",
     catLabel: "Home",
     price: 850,
+    compare: 1100,
     badge: "bestseller",
-    desc: "Heavy navy & ivory buffalo check throw with stitched leather DRY & CO. patch. Sofa, car boot, picnic.",
+    rating: 5.0,
+    reviews: 91,
+    stock: 11,
+    hook: "The signature sofa claim.",
+    desc: "Heavy navy & ivory buffalo check with stitched leather patch. Looks like home décor. Feels like devotion.",
     colors: "Navy / Ivory",
-    sizes: "120 Ã— 150 cm",
-    source: "Woven import Â· finished in SA",
+    sizes: ["One size"],
+    source: "Finished in SA",
     image: "assets/images/products/product-check-blanket.png",
-    motif: "CHECK"
+    motif: "CHECK",
+    pairsWith: ["boucle-bed", "calm-mist"]
   },
   {
     id: "travel-mat",
@@ -49,26 +69,38 @@ const PRODUCTS = [
     category: "home",
     catLabel: "Home",
     price: 490,
-    desc: "Fold-flat waterproof mat with soft face. Protects car seats, guest beds and Airbnb floors.",
+    compare: 620,
+    rating: 4.7,
+    reviews: 63,
+    stock: 22,
+    hook: "Guest-bed insurance.",
+    desc: "Fold-flat waterproof mat with soft face. Cars, Airbnbs, weekend houses — protected in one roll.",
     colors: "Stone",
-    sizes: "70 Ã— 100 cm",
+    sizes: ["One size"],
     source: "Local cut & sew",
     image: "assets/images/products/product-travel-mat.png",
-    motif: "MAT"
+    motif: "MAT",
+    pairsWith: ["boot-liner", "treat-pouch"]
   },
   {
     id: "boucle-bed",
-    name: "Constantia BouclÃ© Bed",
+    name: "Constantia Bouclé Bed",
     category: "home",
     catLabel: "Home",
     price: 1890,
+    compare: 2490,
     badge: "bestseller",
-    desc: "Furniture-grade orthopedic bed in soft bouclÃ©. Removable cover. Looks like lounge seating, not a dog crate.",
-    colors: "Oatmeal Â· Charcoal",
-    sizes: "M Â· L",
+    rating: 4.9,
+    reviews: 54,
+    stock: 6,
+    hook: "Furniture first. Dog bed second.",
+    desc: "Orthopedic bouclé bed that reads as lounge seating. Removable cover. The piece interiors people photograph.",
+    colors: "Oatmeal · Charcoal",
+    sizes: ["M", "L"],
     source: "Local upholstery",
     image: "assets/images/products/product-boucle-bed.png",
-    motif: "BED"
+    motif: "BED",
+    pairsWith: ["check-blanket", "calm-mist"]
   },
   {
     id: "leather-collar",
@@ -76,13 +108,19 @@ const PRODUCTS = [
     category: "leather",
     catLabel: "Leather",
     price: 420,
+    compare: 560,
     badge: "bestseller",
-    desc: "Full-grain vegetable-tanned collar, solid brass hardware, hand-finished edges. Ages beautifully.",
-    colors: "Tan Â· Navy Â· Olive",
-    sizes: "S Â· M Â· L",
+    rating: 4.9,
+    reviews: 203,
+    stock: 31,
+    hook: "Ages like a favourite belt.",
+    desc: "Full-grain vegetable-tanned leather, solid brass, hand-finished edges. The daily wearable that makes nylon feel cheap.",
+    colors: "Tan · Navy · Olive",
+    sizes: ["S", "M", "L"],
     source: "SA leather goods",
     image: "assets/images/products/product-leather-collar.png",
-    motif: "COLLAR"
+    motif: "COLLAR",
+    pairsWith: ["leather-lead", "name-tag"]
   },
   {
     id: "leather-lead",
@@ -90,12 +128,18 @@ const PRODUCTS = [
     category: "leather",
     catLabel: "Leather",
     price: 480,
-    desc: "1.4 m matching lead with soft hand-feel and reinforced stitch points. Pair with the Karoo collar.",
-    colors: "Tan Â· Navy Â· Olive",
-    sizes: "Standard",
+    compare: 620,
+    rating: 4.8,
+    reviews: 117,
+    stock: 28,
+    hook: "Match the collar. Own the walk.",
+    desc: "1.4 m soft-hand lead with reinforced stitch points. Pair with the Karoo collar for the set everyone notices.",
+    colors: "Tan · Navy · Olive",
+    sizes: ["Standard"],
     source: "SA leather goods",
     image: "assets/images/products/product-leather-lead.png",
-    motif: "LEAD"
+    motif: "LEAD",
+    pairsWith: ["leather-collar", "treat-pouch"]
   },
   {
     id: "harness",
@@ -103,13 +147,19 @@ const PRODUCTS = [
     category: "leather",
     catLabel: "Leather",
     price: 620,
+    compare: 790,
     badge: "new",
-    desc: "Minimal Y-front harness in leather & webbing. Even pull distribution, no choke, brass fittings.",
+    rating: 4.8,
+    reviews: 38,
+    stock: 12,
+    hook: "Pull without the choke.",
+    desc: "Minimal Y-front in leather & webbing. Even distribution. Brass that feels expensive in the hand.",
     colors: "Tan / Navy",
-    sizes: "S Â· M Â· L",
+    sizes: ["S", "M", "L"],
     source: "SA leather + webbing",
     image: "assets/images/products/product-harness.png",
-    motif: "HARNESS"
+    motif: "HARNESS",
+    pairsWith: ["leather-lead", "treat-pouch"]
   },
   {
     id: "treat-pouch",
@@ -117,12 +167,18 @@ const PRODUCTS = [
     category: "leather",
     catLabel: "Leather",
     price: 280,
-    desc: "Belt-clip leather pouch for treats & bags. Quiet magnetic closure â€” no plastic rattle on walks.",
+    compare: 360,
+    rating: 4.7,
+    reviews: 84,
+    stock: 40,
+    hook: "Silent magnetic close.",
+    desc: "Belt-clip leather pouch for treats & bags. No plastic rattle. The small upgrade that feels big every walk.",
     colors: "Tan",
-    sizes: "One size",
+    sizes: ["One size"],
     source: "SA leather goods",
     image: "assets/images/products/product-treat-pouch.png",
-    motif: "POUCH"
+    motif: "POUCH",
+    pairsWith: ["leather-lead", "bandana"]
   },
   {
     id: "ceramic-bowls",
@@ -130,13 +186,19 @@ const PRODUCTS = [
     category: "dining",
     catLabel: "Dining",
     price: 560,
+    compare: 720,
     badge: "bestseller",
-    desc: "Weighted matte ceramic bowls â€” food & water â€” that sit beautifully on stone floors and kitchen counters.",
-    colors: "Ivory Â· Slate",
-    sizes: "Medium pair",
-    source: "Local ceramics studio",
+    rating: 4.9,
+    reviews: 76,
+    stock: 18,
+    hook: "Kitchen-counter beautiful.",
+    desc: "Weighted matte ceramic — food & water — that belongs next to your own tableware.",
+    colors: "Ivory · Slate",
+    sizes: ["Medium pair"],
+    source: "Local ceramics",
     image: "assets/images/products/product-ceramic-bowls.png",
-    motif: "BOWLS"
+    motif: "BOWLS",
+    pairsWith: ["elevated-feeder", "calm-mist"]
   },
   {
     id: "elevated-feeder",
@@ -144,12 +206,18 @@ const PRODUCTS = [
     category: "dining",
     catLabel: "Dining",
     price: 980,
-    desc: "Solid oak stand with ceramic inserts. Better posture for mediumâ€“large dogs. Wipe-clean.",
+    compare: 1280,
+    rating: 4.8,
+    reviews: 41,
+    stock: 8,
+    hook: "Joinery, not plastic.",
+    desc: "Solid oak stand with ceramic inserts. Better posture. Looks like furniture because it is.",
     colors: "Natural oak",
-    sizes: "M Â· L",
+    sizes: ["M", "L"],
     source: "Local joinery",
     image: "assets/images/products/product-elevated-feeder.png",
-    motif: "FEEDER"
+    motif: "FEEDER",
+    pairsWith: ["ceramic-bowls"]
   },
   {
     id: "boot-liner",
@@ -157,13 +225,19 @@ const PRODUCTS = [
     category: "travel",
     catLabel: "Travel",
     price: 790,
+    compare: 990,
     badge: "new",
-    desc: "Quilted waterproof boot cover with raised bumpers. Keeps mud in, leather seats safe, dogs steady.",
+    rating: 4.8,
+    reviews: 52,
+    stock: 15,
+    hook: "Leather seats stay leather seats.",
+    desc: "Quilted waterproof boot cover with raised bumpers. Mud in. Dignity intact.",
     colors: "Navy",
-    sizes: "Universal hatch / SUV",
-    source: "Imported shell Â· local finish",
+    sizes: ["Universal"],
+    source: "Local finish",
     image: "assets/images/products/product-boot-liner.png",
-    motif: "LINER"
+    motif: "LINER",
+    pairsWith: ["travel-mat", "dry-robe-sand"]
   },
   {
     id: "bandana",
@@ -171,12 +245,18 @@ const PRODUCTS = [
     category: "apparel",
     catLabel: "Apparel",
     price: 150,
-    desc: "Soft cotton bandana in estate olive check. Easy gift, high margin, photogenic.",
+    compare: 190,
+    rating: 4.9,
+    reviews: 156,
+    stock: 55,
+    hook: "The easiest gift that still looks expensive.",
+    desc: "Soft cotton estate olive check. Photogenic. Perfect add-on at checkout.",
     colors: "Olive check",
-    sizes: "S Â· M Â· L",
+    sizes: ["S", "M", "L"],
     source: "Local print & sew",
     image: "assets/images/products/product-bandana.png",
-    motif: "BANDANA"
+    motif: "BANDANA",
+    pairsWith: ["leather-collar", "name-tag"]
   },
   {
     id: "knit-jumper",
@@ -184,12 +264,18 @@ const PRODUCTS = [
     category: "apparel",
     catLabel: "Apparel",
     price: 450,
-    desc: "Fine-gauge cotton-blend jumper for cooler Cape evenings. Neutral enough for any interior.",
-    colors: "Cream Â· Navy",
-    sizes: "XSâ€“XL",
-    source: "Knit import Â· branded SA",
+    compare: 580,
+    rating: 4.7,
+    reviews: 67,
+    stock: 19,
+    hook: "Cape evening weather, handled.",
+    desc: "Fine-gauge knit in cream or navy. Neutral enough for any interior shoot.",
+    colors: "Cream · Navy",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    source: "Branded in SA",
     image: "assets/images/products/product-knit-jumper.png",
-    motif: "KNIT"
+    motif: "KNIT",
+    pairsWith: ["bandana", "check-blanket"]
   },
   {
     id: "calm-mist",
@@ -197,12 +283,18 @@ const PRODUCTS = [
     category: "grooming",
     catLabel: "Grooming",
     price: 220,
-    desc: "Light linen-and-cedar grooming mist. Freshens coats between baths without soaking fur.",
-    colors: "100 ml glass",
-    sizes: "100 ml",
-    source: "Local fill & label",
+    compare: 280,
+    rating: 4.8,
+    reviews: 98,
+    stock: 44,
+    hook: "Linen. Cedar. Fresh without a bath.",
+    desc: "Light mist for coats between washes. The ritual customers keep by the door.",
+    colors: "100 ml",
+    sizes: ["100 ml"],
+    source: "Filled locally",
     image: "assets/images/products/product-calm-mist.png",
-    motif: "MIST"
+    motif: "MIST",
+    pairsWith: ["dry-shampoo", "towel-set"]
   },
   {
     id: "dry-shampoo",
@@ -210,26 +302,38 @@ const PRODUCTS = [
     category: "grooming",
     catLabel: "Grooming",
     price: 190,
+    compare: 240,
     badge: "bestseller",
-    desc: "Powder dry shampoo for in-between washes â€” the namesake ritual. Leaves coat soft, not chalky.",
-    colors: "Apothecary tin",
-    sizes: "80 g",
-    source: "Local fill & label",
+    rating: 4.9,
+    reviews: 211,
+    stock: 60,
+    hook: "The namesake ritual. Repeat buy.",
+    desc: "Powder dry clean for in-between washes. Soft coat. No chalky finish. Highest reorder rate in the line.",
+    colors: "80 g tin",
+    sizes: ["80 g"],
+    source: "Filled locally",
     image: "assets/images/products/product-dry-shampoo.png",
-    motif: "DRY"
+    motif: "DRY",
+    pairsWith: ["calm-mist", "dry-robe-sand"]
   },
   {
     id: "towel-set",
     name: "Double Dry Towel Set",
     category: "drying",
-    catLabel: "Drying",
+    catLabel: "Dry Ritual",
     price: 380,
-    desc: "Two ultra-absorbent microfibre towels with leather loop tags. Pack in the boot, hang by the pool.",
-    colors: "Sand pair",
-    sizes: "2 Ã— large",
-    source: "Import textile Â· local brand",
+    compare: 480,
+    rating: 4.8,
+    reviews: 73,
+    stock: 26,
+    hook: "Two towels. Zero excuses.",
+    desc: "Ultra-absorbent microfibre pair with leather loop tags. Boot. Pool. Always ready.",
+    colors: "Sand",
+    sizes: ["2 × large"],
+    source: "Branded in SA",
     image: "assets/images/products/product-towel-set.png",
-    motif: "TOWEL"
+    motif: "TOWEL",
+    pairsWith: ["dry-robe-sand", "dry-shampoo"]
   },
   {
     id: "name-tag",
@@ -237,19 +341,70 @@ const PRODUCTS = [
     category: "leather",
     catLabel: "Leather",
     price: 120,
-    desc: "Solid brass ID disc, engraved locally. Pair with any collar. Quiet luxury detail that sells itself.",
+    compare: 160,
+    rating: 5.0,
+    reviews: 189,
+    stock: 80,
+    hook: "Engraved locally. Quiet flex.",
+    desc: "Solid brass ID disc. Pair with any collar. The detail that finishes the look.",
     colors: "Brass",
-    sizes: "Engraved",
+    sizes: ["Engraved"],
     source: "Local engraving",
     image: "assets/images/products/product-name-tag.png",
-    motif: "BRASS"
+    motif: "BRASS",
+    pairsWith: ["leather-collar", "bandana"]
   }
 ];
 
-const CART_KEY = "dryco_cart_v1";
+const BUNDLES = [
+  {
+    id: "bundle-dry-ritual",
+    name: "Dry Ritual Set",
+    tagline: "Robe + towels + dry clean — the after-swim system.",
+    items: ["dry-robe-sand", "towel-set", "dry-shampoo"],
+    price: 1120,
+    compare: 1260,
+    save: 140,
+    image: "assets/images/products/product-dry-robe-sand.png"
+  },
+  {
+    id: "bundle-walk",
+    name: "Long Walk Set",
+    tagline: "Collar + lead + pouch. Look expensive on every pavement.",
+    items: ["leather-collar", "leather-lead", "treat-pouch"],
+    price: 1050,
+    compare: 1180,
+    save: 130,
+    image: "assets/images/products/product-leather-collar.png"
+  },
+  {
+    id: "bundle-home",
+    name: "Sofa Claim Set",
+    tagline: "Blanket + calm mist. Home that feels like devotion.",
+    items: ["check-blanket", "calm-mist"],
+    price: 980,
+    compare: 1070,
+    save: 90,
+    image: "assets/images/products/product-check-blanket.png"
+  }
+];
+
+const REVIEWS = [
+  { name: "Sarah M.", place: "Constantia", text: "The dry robe is the first pet product that doesn’t look like a joke in our hallway. Milo would have loved this.", stars: 5 },
+  { name: "James K.", place: "Stellenbosch", text: "Bought the collar and lead set. People stop us on walks. Worth every rand.", stars: 5 },
+  { name: "Anika P.", place: "Sea Point", text: "Estate blanket lives on the sofa permanently. Guests think it’s ours. It is — for the dog.", stars: 5 },
+  { name: "Thandi R.", place: "Parkhurst", text: "Finally a brand that understands wet Cape weather and good interiors.", stars: 5 }
+];
+
+const CART_KEY = "dryco_cart_v2";
 
 function money(n) {
   return "R " + Number(n).toLocaleString("en-ZA");
+}
+
+function stars(n) {
+  const full = Math.round(n);
+  return "★".repeat(full) + "☆".repeat(5 - full);
 }
 
 function getCart() {
@@ -264,6 +419,16 @@ function saveCart(cart) {
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
   updateCartCount();
   renderCart();
+  updateShipBar();
+}
+
+function cartTotal() {
+  return getCart().reduce((s, line) => {
+    const p = PRODUCTS.find((x) => x.id === line.id);
+    const b = BUNDLES.find((x) => x.id === line.id);
+    const price = p ? p.price : b ? b.price : 0;
+    return s + price * line.qty;
+  }, 0);
 }
 
 function updateCartCount() {
@@ -274,23 +439,41 @@ function updateCartCount() {
   });
 }
 
-function addToCart(id, qty = 1) {
+function updateShipBar() {
+  const el = document.querySelector("[data-ship-bar]");
+  if (!el) return;
+  const total = cartTotal();
+  const left = Math.max(0, FREE_SHIP - total);
+  const pct = Math.min(100, Math.round((total / FREE_SHIP) * 100));
+  if (total <= 0) {
+    el.innerHTML = `<span>Free nationwide shipping over ${money(FREE_SHIP)}</span><div class="ship-track"><i style="width:0%"></i></div>`;
+  } else if (left > 0) {
+    el.innerHTML = `<span>You’re ${money(left)} from free shipping</span><div class="ship-track"><i style="width:${pct}%"></i></div>`;
+  } else {
+    el.innerHTML = `<span class="ship-unlocked">Free shipping unlocked</span><div class="ship-track"><i style="width:100%"></i></div>`;
+  }
+}
+
+function addToCart(id, qty = 1, size = "") {
   const product = PRODUCTS.find((p) => p.id === id);
-  if (!product) return;
+  const bundle = BUNDLES.find((b) => b.id === id);
+  if (!product && !bundle) return;
   const cart = getCart();
-  const existing = cart.find((i) => i.id === id);
+  const key = size ? `${id}::${size}` : id;
+  const existing = cart.find((i) => i.key === key || (!i.key && i.id === id && !size));
   if (existing) existing.qty += qty;
-  else cart.push({ id, qty });
+  else cart.push({ id, qty, size, key });
   saveCart(cart);
-  showToast(`${product.name} added`);
+  showToast(`${(product || bundle).name} added`);
   openCart();
 }
 
-function setQty(id, qty) {
+function setQty(keyOrId, qty) {
   let cart = getCart();
-  if (qty <= 0) cart = cart.filter((i) => i.id !== id);
+  const match = (i) => i.key === keyOrId || i.id === keyOrId;
+  if (qty <= 0) cart = cart.filter((i) => !match(i));
   else {
-    const line = cart.find((i) => i.id === id);
+    const line = cart.find(match);
     if (line) line.qty = qty;
   }
   saveCart(cart);
@@ -303,36 +486,72 @@ function productCardHTML(p) {
       : p.badge === "new"
         ? '<span class="badge">New</span>'
         : "";
-
-  const media = p.image
-    ? `<img src="${p.image}" alt="${p.name}" loading="lazy">`
-    : `<div class="placeholder"><strong>DRY & CO.</strong><span>${p.motif}</span></div>`;
-
+  const save = p.compare ? Math.round((1 - p.price / p.compare) * 100) : 0;
   return `
   <article class="product-card reveal" data-category="${p.category}">
-    <div class="product-media">
+    <div class="product-media" data-quick="${p.id}" role="button" tabindex="0">
       ${badge}
-      ${media}
+      ${save ? `<span class="badge save">-${save}%</span>` : ""}
+      <img src="${p.image}" alt="${p.name}" loading="lazy">
+      <button class="quick-btn" type="button" data-quick="${p.id}">Quick view</button>
     </div>
     <div class="product-body">
-      <div class="product-cat">${p.catLabel}</div>
-      <h3>${p.name}</h3>
-      <p class="desc">${p.desc}</p>
+      <div class="product-cat">${p.catLabel} · <span class="rating">${stars(p.rating)}</span> ${p.rating}</div>
+      <h3 data-quick="${p.id}">${p.name}</h3>
+      <p class="desc">${p.hook || p.desc}</p>
       <div class="product-meta">
-        <div class="price">${money(p.price)}</div>
+        <div class="price">${p.compare ? `<s>${money(p.compare)}</s>` : ""}${money(p.price)}</div>
         <button class="btn btn-outline btn-sm" data-add="${p.id}">Add</button>
       </div>
     </div>
   </article>`;
 }
 
-function renderProducts(filter = "all", target = "#product-grid") {
+function bundleCardHTML(b) {
+  return `
+  <article class="bundle-card reveal">
+    <div class="bundle-media"><img src="${b.image}" alt="${b.name}"></div>
+    <div class="bundle-body">
+      <span class="bundle-save">Save ${money(b.save)}</span>
+      <h3>${b.name}</h3>
+      <p>${b.tagline}</p>
+      <div class="product-meta">
+        <div class="price"><s>${money(b.compare)}</s>${money(b.price)}</div>
+        <button class="btn btn-leather btn-sm" data-add-bundle="${b.id}">Add set</button>
+      </div>
+    </div>
+  </article>`;
+}
+
+function renderProducts(filter = "all", sort = "featured", target = "#product-grid") {
   const el = document.querySelector(target);
   if (!el) return;
-  const list =
-    filter === "all" ? PRODUCTS : PRODUCTS.filter((p) => p.category === filter);
+  let list = filter === "all" ? [...PRODUCTS] : PRODUCTS.filter((p) => p.category === filter);
+  if (sort === "price-asc") list.sort((a, b) => a.price - b.price);
+  if (sort === "price-desc") list.sort((a, b) => b.price - a.price);
+  if (sort === "rating") list.sort((a, b) => b.rating - a.rating);
+  if (sort === "bestsellers") list.sort((a, b) => (b.reviews || 0) - (a.reviews || 0));
   el.innerHTML = list.map(productCardHTML).join("");
   observeReveals();
+}
+
+function renderBundles() {
+  const el = document.querySelector("#bundle-grid");
+  if (!el) return;
+  el.innerHTML = BUNDLES.map(bundleCardHTML).join("");
+}
+
+function renderReviews() {
+  const el = document.querySelector("#review-rail");
+  if (!el) return;
+  el.innerHTML = REVIEWS.map(
+    (r) => `
+    <blockquote class="review-card reveal">
+      <div class="rating">${stars(r.stars)}</div>
+      <p>“${r.text}”</p>
+      <cite>${r.name} · ${r.place}</cite>
+    </blockquote>`
+  ).join("");
 }
 
 function renderCart() {
@@ -341,43 +560,97 @@ function renderCart() {
   if (!box) return;
   const cart = getCart();
   if (!cart.length) {
-    box.innerHTML = `<div class="cart-empty">Your bag is empty.<br>Add something beautiful.</div>`;
+    box.innerHTML = `<div class="cart-empty">Your bag is empty.<br><span>The Dry Ritual Set is the move.</span></div>`;
     if (totalEl) totalEl.textContent = money(0);
+    updateShipBar();
     return;
   }
-  let total = 0;
   box.innerHTML = cart
     .map((line) => {
       const p = PRODUCTS.find((x) => x.id === line.id);
-      if (!p) return "";
-      total += p.price * line.qty;
-      const thumb = p.image
-        ? `<img class="thumb" src="${p.image}" alt="">`
-        : `<div class="thumb">${p.motif}</div>`;
+      const b = BUNDLES.find((x) => x.id === line.id);
+      const item = p || b;
+      if (!item) return "";
+      const key = line.key || line.id;
+      const thumb = item.image
+        ? `<img class="thumb" src="${item.image}" alt="">`
+        : `<div class="thumb">${item.motif || "SET"}</div>`;
       return `
       <div class="cart-line">
         ${thumb}
         <div>
-          <h4>${p.name}</h4>
-          <div class="meta">${money(p.price)}</div>
+          <h4>${item.name}${line.size ? ` · ${line.size}` : ""}</h4>
+          <div class="meta">${money(item.price)}</div>
           <div class="qty-row">
-            <button type="button" data-qty="${p.id}" data-delta="-1" aria-label="Decrease">âˆ’</button>
+            <button type="button" data-qty="${key}" data-delta="-1">−</button>
             <span>${line.qty}</span>
-            <button type="button" data-qty="${p.id}" data-delta="1" aria-label="Increase">+</button>
+            <button type="button" data-qty="${key}" data-delta="1">+</button>
           </div>
         </div>
-        <button type="button" data-remove="${p.id}" aria-label="Remove">âœ•</button>
+        <button type="button" data-remove="${key}" aria-label="Remove">✕</button>
       </div>`;
-
     })
     .join("");
-  if (totalEl) totalEl.textContent = money(total);
+  if (totalEl) totalEl.textContent = money(cartTotal());
+  updateShipBar();
+}
+
+function openQuick(id) {
+  const p = PRODUCTS.find((x) => x.id === id);
+  if (!p) return;
+  const modal = document.querySelector(".qv-modal");
+  if (!modal) return;
+  const sizes = (p.sizes || ["One size"])
+    .map((s, i) => `<button type="button" class="size-chip${i === 0 ? " active" : ""}" data-size="${s}">${s}</button>`)
+    .join("");
+  const pairs = (p.pairsWith || [])
+    .map((pid) => PRODUCTS.find((x) => x.id === pid))
+    .filter(Boolean)
+    .map(
+      (x) =>
+        `<button type="button" class="pair-chip" data-quick="${x.id}"><img src="${x.image}" alt=""><span>${x.name}<br><strong>${money(x.price)}</strong></span></button>`
+    )
+    .join("");
+
+  modal.innerHTML = `
+    <div class="qv-panel">
+      <button class="qv-close" data-close-qv aria-label="Close">✕</button>
+      <div class="qv-grid">
+        <div class="qv-media"><img src="${p.image}" alt="${p.name}"></div>
+        <div class="qv-copy">
+          <div class="product-cat">${p.catLabel} · ${stars(p.rating)} ${p.rating} (${p.reviews})</div>
+          <h2>${p.name}</h2>
+          <p class="qv-hook">${p.hook || ""}</p>
+          <div class="price qv-price">${p.compare ? `<s>${money(p.compare)}</s>` : ""}${money(p.price)}</div>
+          <p>${p.desc}</p>
+          <p class="qv-meta">${p.colors} · ${p.source}</p>
+          <p class="stock ${p.stock < 10 ? "low" : ""}">${p.stock < 10 ? `Only ${p.stock} left` : `${p.stock} in stock`} · ships in 2–4 days</p>
+          <div class="size-row" data-size-row>${sizes}</div>
+          <div class="qv-actions">
+            <button class="btn btn-primary" data-qv-add="${p.id}">Add to bag</button>
+            <button class="btn btn-outline" data-qv-wa="${p.id}">Buy on WhatsApp</button>
+          </div>
+          <div class="pair-block">
+            <h4>Complete the look</h4>
+            <div class="pair-row">${pairs}</div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeQuick() {
+  document.querySelector(".qv-modal")?.classList.remove("open");
+  document.body.style.overflow = "";
 }
 
 function openCart() {
   document.querySelector(".cart-drawer")?.classList.add("open");
   document.querySelector(".cart-overlay")?.classList.add("open");
   document.body.style.overflow = "hidden";
+  updateShipBar();
 }
 
 function closeCart() {
@@ -417,42 +690,26 @@ function observeReveals() {
 
 function initHeader() {
   const header = document.querySelector(".site-header");
-  const onScroll = () => {
-    if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 24);
-  };
+  const onScroll = () => header?.classList.toggle("scrolled", window.scrollY > 24);
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
-
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
-  toggle?.addEventListener("click", () => {
-    links?.classList.toggle("open");
-    toggle.classList.toggle("open");
-  });
-  links?.querySelectorAll("a").forEach((a) =>
-    a.addEventListener("click", () => links.classList.remove("open"))
-  );
+  toggle?.addEventListener("click", () => links?.classList.toggle("open"));
+  links?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => links.classList.remove("open")));
 }
 
 function initFilters() {
   const valid = ["all", "drying", "leather", "home", "dining", "travel", "apparel", "grooming"];
+  let sort = "featured";
 
   function applyFilter(filter, updateHash = true) {
     const key = valid.includes(filter) ? filter : "all";
-    document.querySelectorAll(".filter-btn").forEach((b) => {
-      b.classList.toggle("active", b.dataset.filter === key);
-    });
-    if (document.querySelector("#product-grid")) renderProducts(key);
+    document.querySelectorAll(".filter-btn").forEach((b) => b.classList.toggle("active", b.dataset.filter === key));
+    if (document.querySelector("#product-grid")) renderProducts(key, sort);
     if (updateHash && location.pathname.toLowerCase().includes("shop")) {
       const next = key === "all" ? "#shop" : `#${key}`;
       if (location.hash !== next) history.replaceState(null, "", next);
-    }
-    const target =
-      document.getElementById(key === "all" ? "shop" : key) ||
-      document.getElementById("shop");
-    if (target && location.pathname.toLowerCase().includes("shop")) {
-      setTimeout(() => target.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
     }
   }
 
@@ -460,7 +717,12 @@ function initFilters() {
     btn.addEventListener("click", () => applyFilter(btn.dataset.filter || "all"));
   });
 
-  // Collection chips / hash links on shop page
+  document.querySelector("[data-sort]")?.addEventListener("change", (e) => {
+    sort = e.target.value;
+    const active = document.querySelector(".filter-btn.active")?.dataset.filter || "all";
+    applyFilter(active, false);
+  });
+
   document.querySelectorAll('a[href^="#drying"], a[href^="#leather"], a[href^="#home"], a[href^="#dining"], a[href^="#travel"], a[href^="#apparel"], a[href^="#grooming"], a[href="#shop"]').forEach((a) => {
     a.addEventListener("click", (e) => {
       if (!document.querySelector("#product-grid")) return;
@@ -478,41 +740,32 @@ function initFilters() {
   });
 
   const hash = location.hash.replace("#", "");
-  if (document.querySelector("#product-grid")) {
-    if (valid.includes(hash)) applyFilter(hash, false);
-    else if (hash === "shop" || !hash) {
-      /* stay on all */
-    }
-  }
-}
-
-function initSectionScroll() {
-  const hash = location.hash.replace("#", "");
-  if (!hash || document.querySelector("#product-grid")) return;
-  const el = document.getElementById(hash);
-  if (!el) return;
-  setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
+  if (document.querySelector("#product-grid") && valid.includes(hash)) applyFilter(hash, false);
 }
 
 function initNewsletter() {
   document.querySelectorAll("[data-newsletter]").forEach((form) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const email = form.querySelector("input")?.value?.trim();
-      if (!email) return;
-      showToast("Youâ€™re on the list");
+      showToast("You’re on the quiet list");
       form.reset();
     });
   });
 }
 
 function initContact() {
-  const form = document.querySelector("[data-contact]");
-  form?.addEventListener("submit", (e) => {
+  document.querySelector("[data-contact]")?.addEventListener("submit", (e) => {
     e.preventDefault();
-    showToast("Message received â€” weâ€™ll reply soon");
-    form.reset();
+    showToast("Message received — we’ll reply soon");
+    e.target.reset();
   });
+}
+
+function initSectionScroll() {
+  const hash = location.hash.replace("#", "");
+  if (!hash || document.querySelector("#product-grid")) return;
+  const el = document.getElementById(hash);
+  if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
 }
 
 function whatsappCheckout() {
@@ -521,17 +774,27 @@ function whatsappCheckout() {
     showToast("Add items first");
     return;
   }
-  let total = 0;
   const lines = cart.map((line) => {
     const p = PRODUCTS.find((x) => x.id === line.id);
-    if (!p) return "";
-    total += p.price * line.qty;
-    return `â€¢ ${p.name} Ã— ${line.qty} â€” ${money(p.price * line.qty)}`;
+    const b = BUNDLES.find((x) => x.id === line.id);
+    const item = p || b;
+    if (!item) return "";
+    return `• ${item.name}${line.size ? ` (${line.size})` : ""} × ${line.qty} — ${money(item.price * line.qty)}`;
   });
+  const total = cartTotal();
+  const ship = total >= FREE_SHIP ? "Free shipping" : `Shipping quoted (free over ${money(FREE_SHIP)})`;
   const text = encodeURIComponent(
-    `Hi dry&co â€” Iâ€™d like to order:\n\n${lines.join("\n")}\n\nTotal: ${money(total)}\n\nDelivery suburb: `
+    `Hi dry&co — I’d like to order:\n\n${lines.join("\n")}\n\nTotal: ${money(total)}\n${ship}\n\nDelivery suburb: `
   );
-  // Replace with Charne's WhatsApp business number when ready
+  window.open(`https://wa.me/27600000000?text=${text}`, "_blank");
+}
+
+function waProduct(id, size) {
+  const p = PRODUCTS.find((x) => x.id === id);
+  if (!p) return;
+  const text = encodeURIComponent(
+    `Hi dry&co — I’d like the ${p.name}${size ? ` in size ${size}` : ""} (${money(p.price)}).\n\nDelivery suburb: `
+  );
   window.open(`https://wa.me/27600000000?text=${text}`, "_blank");
 }
 
@@ -539,15 +802,41 @@ document.addEventListener("click", (e) => {
   const add = e.target.closest("[data-add]");
   if (add) addToCart(add.dataset.add);
 
+  const addBundle = e.target.closest("[data-add-bundle]");
+  if (addBundle) addToCart(addBundle.dataset.addBundle);
+
+  const quick = e.target.closest("[data-quick]");
+  if (quick && !e.target.closest("[data-add]")) openQuick(quick.dataset.quick);
+
   if (e.target.closest("[data-open-cart]")) openCart();
   if (e.target.closest("[data-close-cart]")) closeCart();
+  if (e.target.closest("[data-close-qv]") || e.target.classList.contains("qv-modal")) closeQuick();
+
+  const sizeChip = e.target.closest(".size-chip");
+  if (sizeChip) {
+    sizeChip.parentElement.querySelectorAll(".size-chip").forEach((c) => c.classList.remove("active"));
+    sizeChip.classList.add("active");
+  }
+
+  const qvAdd = e.target.closest("[data-qv-add]");
+  if (qvAdd) {
+    const size = document.querySelector(".size-chip.active")?.dataset.size || "";
+    addToCart(qvAdd.dataset.qvAdd, 1, size);
+    closeQuick();
+  }
+
+  const qvWa = e.target.closest("[data-qv-wa]");
+  if (qvWa) {
+    const size = document.querySelector(".size-chip.active")?.dataset.size || "";
+    waProduct(qvWa.dataset.qvWa, size);
+  }
 
   const qtyBtn = e.target.closest("[data-qty]");
   if (qtyBtn) {
-    const id = qtyBtn.dataset.qty;
+    const key = qtyBtn.dataset.qty;
     const delta = Number(qtyBtn.dataset.delta);
-    const line = getCart().find((i) => i.id === id);
-    if (line) setQty(id, line.qty + delta);
+    const line = getCart().find((i) => i.key === key || i.id === key);
+    if (line) setQty(key, line.qty + delta);
   }
 
   const remove = e.target.closest("[data-remove]");
@@ -564,18 +853,19 @@ document.addEventListener("DOMContentLoaded", () => {
   initSectionScroll();
   updateCartCount();
   renderCart();
+  renderBundles();
+  renderReviews();
+  updateShipBar();
 
-  if (document.querySelector("#product-grid") && !location.hash.replace("#", "")) {
-    renderProducts("all");
-  } else if (document.querySelector("#product-grid") && !["drying","leather","home","dining","travel","apparel","grooming"].includes(location.hash.replace("#",""))) {
-    renderProducts("all");
+  if (document.querySelector("#product-grid")) {
+    const hash = location.hash.replace("#", "");
+    const valid = ["drying", "leather", "home", "dining", "travel", "apparel", "grooming"];
+    if (!valid.includes(hash)) renderProducts("all");
   }
   if (document.querySelector("#home-featured-grid")) {
     const featured = PRODUCTS.filter((p) => p.badge === "bestseller").slice(0, 6);
-    const el = document.querySelector("#home-featured-grid");
-    el.innerHTML = featured.map(productCardHTML).join("");
+    document.querySelector("#home-featured-grid").innerHTML = featured.map(productCardHTML).join("");
   }
-
   observeReveals();
 });
 
@@ -585,9 +875,8 @@ window.addEventListener("hashchange", () => {
   if (document.querySelector("#product-grid") && valid.includes(hash)) {
     document.querySelector(`.filter-btn[data-filter="${hash}"]`)?.click();
   } else {
-    const el = document.getElementById(hash);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 });
 
-window.DRYCO = { PRODUCTS, money, addToCart };
+window.DRYCO = { PRODUCTS, BUNDLES, money, addToCart, openQuick };

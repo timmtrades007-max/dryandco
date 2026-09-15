@@ -944,6 +944,22 @@ function money(n) {
   return "R " + Number(n).toLocaleString("en-ZA");
 }
 
+function productImages(p) {
+  if (p.images && p.images.length) return p.images;
+  const file = (p.image || "").split("/").pop() || "";
+  const stem = file.replace(/\.[^.]+$/, "");
+  // Hero master first, then true alternate pro shots
+  const list = [];
+  if (p.image) list.push(p.image);
+  if (stem) {
+    const base = `assets/images/products/views/${stem}`;
+    for (const view of ["angle", "detail", "flat"]) {
+      list.push(`${base}-${view}.jpg?v=7`);
+    }
+  }
+  return list;
+}
+
 function stars(n) {
   const full = Math.round(n);
   return "★".repeat(full) + "☆".repeat(5 - full);
@@ -1142,6 +1158,7 @@ function openQuick(id) {
   if (!p) return;
   const modal = document.querySelector(".qv-modal");
   if (!modal) return;
+  const gallery = productImages(p);
   const sizes = (p.sizes || ["One size"])
     .map((s, i) => `<button type="button" class="size-chip${i === 0 ? " active" : ""}" data-size="${s}">${s}</button>`)
     .join("");
@@ -1153,12 +1170,26 @@ function openQuick(id) {
         `<button type="button" class="pair-chip" data-quick="${x.id}"><img src="${x.image}" alt=""><span>${x.name}<br><strong>${money(x.price)}</strong></span></button>`
     )
     .join("");
+  const thumbs = gallery
+    .map((src, i) => {
+      const labels = ["Hero", "¾ angle", "Detail", "Flat lay", "Studio"];
+      const label = labels[i] || `View ${i + 1}`;
+      return `<button type="button" class="qv-thumb${i === 0 ? " active" : ""}" data-qv-src="${src}" aria-label="${label}" title="${label}"><img src="${src}" alt=""></button>`;
+    })
+    .join("");
+  const sizeLink =
+    p.sizes && p.sizes.length && p.sizes[0] !== "One size"
+      ? `<a class="size-guide-link" href="size-guide.html">Size guide</a>`
+      : "";
 
   modal.innerHTML = `
     <div class="qv-panel">
-      <button class="qv-close" data-close-qv aria-label="Close">✕</button>
+      <button type="button" class="qv-close" data-close-qv aria-label="Close">✕</button>
       <div class="qv-grid">
-        <div class="qv-media"><img src="${p.image}" alt="${p.name}"></div>
+        <div class="qv-media">
+          <img class="qv-main" src="${gallery[0]}" alt="${p.name}">
+          <div class="qv-thumbs">${thumbs}</div>
+        </div>
         <div class="qv-copy">
           <div class="product-cat">${p.catLabel} · ${stars(p.rating)} ${p.rating} (${p.reviews})</div>
           <h2>${p.name}</h2>
@@ -1167,7 +1198,7 @@ function openQuick(id) {
           <p>${p.desc}</p>
           <p class="qv-meta">${p.colors} · ${p.source}</p>
           <p class="stock ${p.stock < 10 ? "low" : ""}">${p.stock < 10 ? `Only ${p.stock} left` : `${p.stock} in stock`} · ships in 2–4 days</p>
-          <div class="size-row" data-size-row>${sizes}</div>
+          <div class="size-row" data-size-row>${sizes}${sizeLink}</div>
           <div class="qv-actions">
             <button class="btn btn-primary" data-qv-add="${p.id}">Add to bag</button>
             <button class="btn btn-outline" data-qv-wa="${p.id}">Buy on WhatsApp</button>
@@ -1180,11 +1211,15 @@ function openQuick(id) {
       </div>
     </div>`;
   modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
 }
 
 function closeQuick() {
-  document.querySelector(".qv-modal")?.classList.remove("open");
+  const modal = document.querySelector(".qv-modal");
+  if (!modal) return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
 }
 
@@ -1341,6 +1376,13 @@ function waProduct(id, size) {
 }
 
 document.addEventListener("click", (e) => {
+  // Close quick view first — never let other handlers reopen it
+  if (e.target.closest("[data-close-qv]") || e.target === document.querySelector(".qv-modal.open")) {
+    e.preventDefault();
+    closeQuick();
+    return;
+  }
+
   const add = e.target.closest("[data-add]");
   if (add) addToCart(add.dataset.add);
 
@@ -1352,12 +1394,22 @@ document.addEventListener("click", (e) => {
 
   if (e.target.closest("[data-open-cart]")) openCart();
   if (e.target.closest("[data-close-cart]")) closeCart();
-  if (e.target.closest("[data-close-qv]") || e.target.classList.contains("qv-modal")) closeQuick();
 
   const sizeChip = e.target.closest(".size-chip");
   if (sizeChip) {
     sizeChip.parentElement.querySelectorAll(".size-chip").forEach((c) => c.classList.remove("active"));
     sizeChip.classList.add("active");
+  }
+
+  const qvThumb = e.target.closest(".qv-thumb");
+  if (qvThumb) {
+    const src = qvThumb.dataset.qvSrc;
+    const main = document.querySelector(".qv-main");
+    if (src && main) {
+      main.src = src;
+      qvThumb.parentElement.querySelectorAll(".qv-thumb").forEach((t) => t.classList.remove("active"));
+      qvThumb.classList.add("active");
+    }
   }
 
   const qvAdd = e.target.closest("[data-qv-add]");
@@ -1385,6 +1437,13 @@ document.addEventListener("click", (e) => {
   if (remove) setQty(remove.dataset.remove, 0);
 
   if (e.target.closest("[data-whatsapp-checkout]")) whatsappCheckout();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeQuick();
+    closeCart();
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {

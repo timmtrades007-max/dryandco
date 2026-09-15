@@ -238,23 +238,25 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   z-index: 0;
-  /* Prevent browser from softening scaled photos */
-  transform: translateZ(0);
 }
 
+.hero-media picture,
 .hero-media img {
   width: 100%;
   height: 100%;
+  display: block;
+}
+
+.hero-media img {
   object-fit: cover;
-  object-position: center 28%;
-  transform: translateZ(0);
+  object-position: center 35%;
+  transform: none;
   filter: none !important;
   -webkit-filter: none !important;
-  image-rendering: auto;
-  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  will-change: auto;
 }
 
 .hero-media::after {
@@ -1076,7 +1078,10 @@ ul { list-style: none; }
 }
 
 @media (max-width: 720px) {
-  .nav-toggle { display: flex; }
+  #dry-ritual-clip .container {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
 
   .nav-links {
     position: fixed;

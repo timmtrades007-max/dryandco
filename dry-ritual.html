@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Dry Ritual — dry&amp;co</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css?v=5">
+  <link rel="stylesheet" href="assets/css/brand-pro.css?v=5">
+  <style>
+    .ritual-page { max-width: 720px; margin: 0 auto; text-align: center; }
+    .ritual-page video {
+      width: min(100%, 420px);
+      aspect-ratio: 9/16;
+      background: #0B1220;
+      border: 1px solid rgba(11,18,32,0.1);
+    }
+    .frame-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.45rem;
+      margin: 1.75rem 0;
+    }
+    .frame-row img { width: 100%; aspect-ratio: 9/16; object-fit: cover; }
+    .share-note { opacity: 0.75; font-size: 0.9rem; max-width: 48ch; margin: 1rem auto 0; }
+    @media (max-width: 640px) { .frame-row { grid-template-columns: repeat(3, 1fr); } }
+  </style>
+</head>
+<body>
+  <div class="announce">WhatsApp Status / Reel ready · 9:16<a href="shop.html#drying">Shop Dry Ritual</a></div>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">DRY <span class="amp">&amp;</span> CO.</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html#drying">Shop robes</a>
+        <a href="brand-designs.html">Designs</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="kicker" style="color:#a67c52">Campaign</div>
+        <h1>The Dry Ritual</h1>
+        <p>A short clip for WhatsApp Status, Instagram Reels, or the homepage — wrap, wear, rest, brand.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container ritual-page">
+        <video controls playsinline poster="assets/images/ritual/ritual-02-robe.png" src="assets/video/dry-ritual.mp4"></video>
+        <div class="frame-row">
+          <img src="assets/images/ritual/ritual-01-wrap.png" alt="Wrap">
+          <img src="assets/images/ritual/ritual-02-robe.png" alt="Robe">
+          <img src="assets/images/ritual/ritual-03-patch.png" alt="Leather patch">
+          <img src="assets/images/ritual/ritual-04-rest.png" alt="Rest">
+          <img src="assets/images/ritual/ritual-05-endcard.png" alt="DRY & CO.">
+        </div>
+        <p class="share-note">File: <code>assets/video/dry-ritual.mp4</code> — download and post to Status (add caption: “After water. Before the sofa. The Dry Ritual.”).</p>
+        <p style="margin-top:1.5rem">
+          <a class="btn btn-primary" href="shop.html#drying">Shop the Dry Ritual</a>
+          <a class="btn btn-ghost" href="assets/video/dry-ritual.mp4" download>Download MP4</a>
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

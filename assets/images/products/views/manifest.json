@@ -1,0 +1,303 @@
+{
+  "bandana": {
+    "angle": "assets/images/products/views/product-bandana-angle.jpg",
+    "card": "assets/images/products/product-bandana.png",
+    "detail": "assets/images/products/views/product-bandana-detail.jpg",
+    "flat": "assets/images/products/views/product-bandana-flat.jpg",
+    "front": "assets/images/products/views/product-bandana-front.jpg"
+  },
+  "boot-liner": {
+    "angle": "assets/images/products/views/product-boot-liner-angle.jpg",
+    "card": "assets/images/products/product-boot-liner.png",
+    "detail": "assets/images/products/views/product-boot-liner-detail.jpg",
+    "flat": "assets/images/products/views/product-boot-liner-flat.jpg",
+    "front": "assets/images/products/views/product-boot-liner-front.jpg"
+  },
+  "boucle-bed": {
+    "angle": "assets/images/products/views/product-boucle-bed-angle.jpg",
+    "card": "assets/images/products/product-boucle-bed.png",
+    "detail": "assets/images/products/views/product-boucle-bed-detail.jpg",
+    "flat": "assets/images/products/views/product-boucle-bed-flat.jpg",
+    "front": "assets/images/products/views/product-boucle-bed-front.jpg"
+  },
+  "brass-hook": {
+    "angle": "assets/images/products/views/product-brass-hook-angle.jpg",
+    "card": "assets/images/products/product-brass-hook.png",
+    "detail": "assets/images/products/views/product-brass-hook-detail.jpg",
+    "flat": "assets/images/products/views/product-brass-hook-flat.jpg",
+    "front": "assets/images/products/views/product-brass-hook-front.jpg"
+  },
+  "calm-mist": {
+    "angle": "assets/images/products/views/product-calm-mist-angle.jpg",
+    "card": "assets/images/products/product-calm-mist.png",
+    "detail": "assets/images/products/views/product-calm-mist-detail.jpg",
+    "flat": "assets/images/products/views/product-calm-mist-flat.jpg",
+    "front": "assets/images/products/views/product-calm-mist-front.jpg"
+  },
+  "car-hammock": {
+    "angle": "assets/images/products/views/product-car-hammock-angle.jpg",
+    "card": "assets/images/products/product-car-hammock.png",
+    "detail": "assets/images/products/views/product-car-hammock-detail.jpg",
+    "flat": "assets/images/products/views/product-car-hammock-flat.jpg",
+    "front": "assets/images/products/views/product-car-hammock-front.jpg"
+  },
+  "cat-blanket": {
+    "angle": "assets/images/products/views/product-cat-blanket-angle.jpg",
+    "card": "assets/images/products/product-cat-blanket.png",
+    "detail": "assets/images/products/views/product-cat-blanket-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-blanket-flat.jpg",
+    "front": "assets/images/products/views/product-cat-blanket-front.jpg"
+  },
+  "cat-carrier": {
+    "angle": "assets/images/products/views/product-cat-carrier-angle.jpg",
+    "card": "assets/images/products/product-cat-carrier.png",
+    "detail": "assets/images/products/views/product-cat-carrier-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-carrier-flat.jpg",
+    "front": "assets/images/products/views/product-cat-carrier-front.jpg"
+  },
+  "cat-catnip": {
+    "angle": "assets/images/products/views/product-cat-catnip-angle.jpg",
+    "card": "assets/images/products/product-cat-catnip.png",
+    "detail": "assets/images/products/views/product-cat-catnip-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-catnip-flat.jpg",
+    "front": "assets/images/products/views/product-cat-catnip-front.jpg"
+  },
+  "cat-cave": {
+    "angle": "assets/images/products/views/product-cat-cave-angle.jpg",
+    "card": "assets/images/products/product-cat-cave.png",
+    "detail": "assets/images/products/views/product-cat-cave-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-cave-flat.jpg",
+    "front": "assets/images/products/views/product-cat-cave-front.jpg"
+  },
+  "cat-collar": {
+    "angle": "assets/images/products/views/product-cat-collar-angle.jpg",
+    "card": "assets/images/products/product-cat-collar.png",
+    "detail": "assets/images/products/views/product-cat-collar-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-collar-flat.jpg",
+    "front": "assets/images/products/views/product-cat-collar-front.jpg"
+  },
+  "cat-diner": {
+    "angle": "assets/images/products/views/product-cat-diner-angle.jpg",
+    "card": "assets/images/products/product-cat-diner.png",
+    "detail": "assets/images/products/views/product-cat-diner-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-diner-flat.jpg",
+    "front": "assets/images/products/views/product-cat-diner-front.jpg"
+  },
+  "cat-fountain": {
+    "angle": "assets/images/products/views/product-cat-fountain-angle.jpg",
+    "card": "assets/images/products/product-cat-fountain.png",
+    "detail": "assets/images/products/views/product-cat-fountain-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-fountain-flat.jpg",
+    "front": "assets/images/products/views/product-cat-fountain-front.jpg"
+  },
+  "cat-groom": {
+    "angle": "assets/images/products/views/product-cat-groom-angle.jpg",
+    "card": "assets/images/products/product-cat-groom.png",
+    "detail": "assets/images/products/views/product-cat-groom-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-groom-flat.jpg",
+    "front": "assets/images/products/views/product-cat-groom-front.jpg"
+  },
+  "cat-hammock": {
+    "angle": "assets/images/products/views/product-cat-hammock-angle.jpg",
+    "card": "assets/images/products/product-cat-hammock.png",
+    "detail": "assets/images/products/views/product-cat-hammock-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-hammock-flat.jpg",
+    "front": "assets/images/products/views/product-cat-hammock-front.jpg"
+  },
+  "cat-harness": {
+    "angle": "assets/images/products/views/product-cat-harness-angle.jpg",
+    "card": "assets/images/products/product-cat-harness.png",
+    "detail": "assets/images/products/views/product-cat-harness-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-harness-flat.jpg",
+    "front": "assets/images/products/views/product-cat-harness-front.jpg"
+  },
+  "cat-scratcher": {
+    "angle": "assets/images/products/views/product-cat-scratcher-angle.jpg",
+    "card": "assets/images/products/product-cat-scratcher.png",
+    "detail": "assets/images/products/views/product-cat-scratcher-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-scratcher-flat.jpg",
+    "front": "assets/images/products/views/product-cat-scratcher-front.jpg"
+  },
+  "cat-shelves": {
+    "angle": "assets/images/products/views/product-cat-shelves-angle.jpg",
+    "card": "assets/images/products/product-cat-shelves.png",
+    "detail": "assets/images/products/views/product-cat-shelves-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-shelves-flat.jpg",
+    "front": "assets/images/products/views/product-cat-shelves-front.jpg"
+  },
+  "cat-toys": {
+    "angle": "assets/images/products/views/product-cat-toys-angle.jpg",
+    "card": "assets/images/products/product-cat-toys.png",
+    "detail": "assets/images/products/views/product-cat-toys-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-toys-flat.jpg",
+    "front": "assets/images/products/views/product-cat-toys-front.jpg"
+  },
+  "cat-tree": {
+    "angle": "assets/images/products/views/product-cat-tree-angle.jpg",
+    "card": "assets/images/products/product-cat-tree.png",
+    "detail": "assets/images/products/views/product-cat-tree-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-tree-flat.jpg",
+    "front": "assets/images/products/views/product-cat-tree-front.jpg"
+  },
+  "cat-tunnel": {
+    "angle": "assets/images/products/views/product-cat-tunnel-angle.jpg",
+    "card": "assets/images/products/product-cat-tunnel.png",
+    "detail": "assets/images/products/views/product-cat-tunnel-detail.jpg",
+    "flat": "assets/images/products/views/product-cat-tunnel-flat.jpg",
+    "front": "assets/images/products/views/product-cat-tunnel-front.jpg"
+  },
+  "ceramic-bowls": {
+    "angle": "assets/images/products/views/product-ceramic-bowls-angle.jpg",
+    "card": "assets/images/products/product-ceramic-bowls.png",
+    "detail": "assets/images/products/views/product-ceramic-bowls-detail.jpg",
+    "flat": "assets/images/products/views/product-ceramic-bowls-flat.jpg",
+    "front": "assets/images/products/views/product-ceramic-bowls-front.jpg"
+  },
+  "check-blanket": {
+    "angle": "assets/images/products/views/product-check-blanket-angle.jpg",
+    "card": "assets/images/products/product-check-blanket.png",
+    "detail": "assets/images/products/views/product-check-blanket-detail.jpg",
+    "flat": "assets/images/products/views/product-check-blanket-flat.jpg",
+    "front": "assets/images/products/views/product-check-blanket-front.jpg"
+  },
+  "cooling-mat": {
+    "angle": "assets/images/products/views/product-cooling-mat-angle.jpg",
+    "card": "assets/images/products/product-cooling-mat.png",
+    "detail": "assets/images/products/views/product-cooling-mat-detail.jpg",
+    "flat": "assets/images/products/views/product-cooling-mat-flat.jpg",
+    "front": "assets/images/products/views/product-cooling-mat-front.jpg"
+  },
+  "denim-jacket": {
+    "angle": "assets/images/products/views/product-denim-jacket-angle.jpg",
+    "card": "assets/images/products/product-denim-jacket.png",
+    "detail": "assets/images/products/views/product-denim-jacket-detail.jpg",
+    "flat": "assets/images/products/views/product-denim-jacket-flat.jpg",
+    "front": "assets/images/products/views/product-denim-jacket-front.jpg"
+  },
+  "dry-robe-navy": {
+    "angle": "assets/images/products/views/product-dry-robe-navy-angle.jpg",
+    "card": "assets/images/products/product-dry-robe-navy.png",
+    "detail": "assets/images/products/views/product-dry-robe-navy-detail.jpg",
+    "flat": "assets/images/products/views/product-dry-robe-navy-flat.jpg",
+    "front": "assets/images/products/views/product-dry-robe-navy-front.jpg"
+  },
+  "dry-robe-sand": {
+    "angle": "assets/images/products/views/product-dry-robe-sand-angle.jpg",
+    "card": "assets/images/products/product-dry-robe-sand.png",
+    "detail": "assets/images/products/views/product-dry-robe-sand-detail.jpg",
+    "flat": "assets/images/products/views/product-dry-robe-sand-flat.jpg",
+    "front": "assets/images/products/views/product-dry-robe-sand-front.jpg"
+  },
+  "dry-shampoo": {
+    "angle": "assets/images/products/views/product-dry-shampoo-angle.jpg",
+    "card": "assets/images/products/product-dry-shampoo.png",
+    "detail": "assets/images/products/views/product-dry-shampoo-detail.jpg",
+    "flat": "assets/images/products/views/product-dry-shampoo-flat.jpg",
+    "front": "assets/images/products/views/product-dry-shampoo-front.jpg"
+  },
+  "elevated-feeder": {
+    "angle": "assets/images/products/views/product-elevated-feeder-angle.jpg",
+    "card": "assets/images/products/product-elevated-feeder.png",
+    "detail": "assets/images/products/views/product-elevated-feeder-detail.jpg",
+    "flat": "assets/images/products/views/product-elevated-feeder-flat.jpg",
+    "front": "assets/images/products/views/product-elevated-feeder-front.jpg"
+  },
+  "felt-toys": {
+    "angle": "assets/images/products/views/product-felt-toys-angle.jpg",
+    "card": "assets/images/products/product-felt-toys.png",
+    "detail": "assets/images/products/views/product-felt-toys-detail.jpg",
+    "flat": "assets/images/products/views/product-felt-toys-flat.jpg",
+    "front": "assets/images/products/views/product-felt-toys-front.jpg"
+  },
+  "harness": {
+    "angle": "assets/images/products/views/product-harness-angle.jpg",
+    "card": "assets/images/products/product-harness.png",
+    "detail": "assets/images/products/views/product-harness-detail.jpg",
+    "flat": "assets/images/products/views/product-harness-flat.jpg",
+    "front": "assets/images/products/views/product-harness-front.jpg"
+  },
+  "knit-jumper": {
+    "angle": "assets/images/products/views/product-knit-jumper-angle.jpg",
+    "card": "assets/images/products/product-knit-jumper.png",
+    "detail": "assets/images/products/views/product-knit-jumper-detail.jpg",
+    "flat": "assets/images/products/views/product-knit-jumper-flat.jpg",
+    "front": "assets/images/products/views/product-knit-jumper-front.jpg"
+  },
+  "leather-collar": {
+    "angle": "assets/images/products/views/product-leather-collar-angle.jpg",
+    "card": "assets/images/products/product-leather-collar.png",
+    "detail": "assets/images/products/views/product-leather-collar-detail.jpg",
+    "flat": "assets/images/products/views/product-leather-collar-flat.jpg",
+    "front": "assets/images/products/views/product-leather-collar-front.jpg"
+  },
+  "leather-lead": {
+    "angle": "assets/images/products/views/product-leather-lead-angle.jpg",
+    "card": "assets/images/products/product-leather-lead.png",
+    "detail": "assets/images/products/views/product-leather-lead-detail.jpg",
+    "flat": "assets/images/products/views/product-leather-lead-flat.jpg",
+    "front": "assets/images/products/views/product-leather-lead-front.jpg"
+  },
+  "litter-cabinet": {
+    "angle": "assets/images/products/views/product-litter-cabinet-angle.jpg",
+    "card": "assets/images/products/product-litter-cabinet.png",
+    "detail": "assets/images/products/views/product-litter-cabinet-detail.jpg",
+    "flat": "assets/images/products/views/product-litter-cabinet-flat.jpg",
+    "front": "assets/images/products/views/product-litter-cabinet-front.jpg"
+  },
+  "name-tag": {
+    "angle": "assets/images/products/views/product-name-tag-angle.jpg",
+    "card": "assets/images/products/product-name-tag.png",
+    "detail": "assets/images/products/views/product-name-tag-detail.jpg",
+    "flat": "assets/images/products/views/product-name-tag-flat.jpg",
+    "front": "assets/images/products/views/product-name-tag-front.jpg"
+  },
+  "paw-butter": {
+    "angle": "assets/images/products/views/product-paw-butter-angle.jpg",
+    "card": "assets/images/products/product-paw-butter.png",
+    "detail": "assets/images/products/views/product-paw-butter-detail.jpg",
+    "flat": "assets/images/products/views/product-paw-butter-flat.jpg",
+    "front": "assets/images/products/views/product-paw-butter-front.jpg"
+  },
+  "rain-candle": {
+    "angle": "assets/images/products/views/product-rain-candle-angle.jpg",
+    "card": "assets/images/products/product-rain-candle.png",
+    "detail": "assets/images/products/views/product-rain-candle-detail.jpg",
+    "flat": "assets/images/products/views/product-rain-candle-flat.jpg",
+    "front": "assets/images/products/views/product-rain-candle-front.jpg"
+  },
+  "rain-shell": {
+    "angle": "assets/images/products/views/product-rain-shell-angle.jpg",
+    "card": "assets/images/products/product-rain-shell.png",
+    "detail": "assets/images/products/views/product-rain-shell-detail.jpg",
+    "flat": "assets/images/products/views/product-rain-shell-flat.jpg",
+    "front": "assets/images/products/views/product-rain-shell-front.jpg"
+  },
+  "towel-set": {
+    "angle": "assets/images/products/views/product-towel-set-angle.jpg",
+    "card": "assets/images/products/product-towel-set.png",
+    "detail": "assets/images/products/views/product-towel-set-detail.jpg",
+    "flat": "assets/images/products/views/product-towel-set-flat.jpg",
+    "front": "assets/images/products/views/product-towel-set-front.jpg"
+  },
+  "travel-mat": {
+    "angle": "assets/images/products/views/product-travel-mat-angle.jpg",
+    "card": "assets/images/products/product-travel-mat.png",
+    "detail": "assets/images/products/views/product-travel-mat-detail.jpg",
+    "flat": "assets/images/products/views/product-travel-mat-flat.jpg",
+    "front": "assets/images/products/views/product-travel-mat-front.jpg"
+  },
+  "treat-pouch": {
+    "angle": "assets/images/products/views/product-treat-pouch-angle.jpg",
+    "card": "assets/images/products/product-treat-pouch.png",
+    "detail": "assets/images/products/views/product-treat-pouch-detail.jpg",
+    "flat": "assets/images/products/views/product-treat-pouch-flat.jpg",
+    "front": "assets/images/products/views/product-treat-pouch-front.jpg"
+  },
+  "window-perch": {
+    "angle": "assets/images/products/views/product-window-perch-angle.jpg",
+    "card": "assets/images/products/product-window-perch.png",
+    "detail": "assets/images/products/views/product-window-perch-detail.jpg",
+    "flat": "assets/images/products/views/product-window-perch-flat.jpg",
+    "front": "assets/images/products/views/product-window-perch-front.jpg"
+  }
+}

@@ -3,6 +3,15 @@ PRE-LAUNCH — dry&co (do before Charne’s public link)
 
 HOLD deploy until Charne has reviewed on localhost / private preview.
 
+NEW THIS ROUND
+- Multi-view product photos (front / angle / detail / flat) — open Quick view
+- Photos restyled onto warm studio surfaces + grain (more “real” catalog feel)
+- Size guide: size-guide.html (nav + quick-view link)
+- Brand designs page: brand-designs.html (logo, favicon, hero CTA, colours)
+- Dry Ritual clip: dry-ritual.html + assets/video/dry-ritual.mp4 (9:16 Status)
+- Hero WebP + quieter CTAs (Shop + Our story)
+- Favicon SVG live
+
 GO-LIVE SWITCHES (edit these)
 1. assets/js/config.js
    - whatsapp: real number like 27821234567 (no +)
@@ -10,29 +19,18 @@ GO-LIVE SWITCHES (edit these)
 2. Replace placeholder copy in contact if needed
 3. Redeploy to https://dryco-website.vercel.app/ ONLY when approved
 
-ALREADY READY
-- Sharp hero + lifestyle images
-- Announce bar no longer overlaps nav
-- Shipping / Returns / Privacy / FAQ pages
-- Family runbook (runbook.html) for the children
-- robots.txt + sitemap.xml
-- Free shipping threshold R1200
-- WhatsApp checkout + sets + dogs + full cats range
-- 30-day guarantee messaging
-- MESSAGE_FOR_CHARNE.txt ready to send
-
-CATS RANGE (16+)
-Cave, tower, fountain, litter cabinet, collar, hammock, groom set,
-carrier, tunnel, diner, blanket, wall shelves, catnip, scratcher, harness
-+ 3 cat sets
-
 CHARNE REVIEW CHECKLIST
-[ ] Home hero looks sharp
-[ ] Cats section OK
+[ ] Home hero sharp + same lady as story
+[ ] Quick view shows 4 photos per product
+[ ] Size guide readable
+[ ] Dry Ritual clip plays
+[ ] Brand designs page OK
 [ ] Prices OK
-[ ] Milo story OK
 [ ] WhatsApp number correct
-[ ] Approve deploy to dryco-website.vercel.app
+[ ] Approve deploy
 
 LOCAL PREVIEW
 http://localhost:8080
+http://localhost:8080/size-guide.html
+http://localhost:8080/brand-designs.html
+http://localhost:8080/dry-ritual.html

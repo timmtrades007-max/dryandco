@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brand designs — dry&amp;co</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css?v=5">
+  <link rel="stylesheet" href="assets/css/brand-pro.css?v=5">
+  <style>
+    .design-page { max-width: 1100px; margin: 0 auto; }
+    .design-block { margin: 3rem 0; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(11,18,32,0.1); }
+    .design-block h2 { font-family: Georgia, serif; font-weight: 500; margin: 0 0 0.4rem; }
+    .design-block .lead { opacity: 0.75; margin: 0 0 1.5rem; max-width: 60ch; }
+    .design-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 1.5rem; align-items: start; }
+    .design-grid img { width: 100%; display: block; border: 1px solid rgba(11,18,32,0.08); }
+    .swatch-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+    .swatch { width: 120px; text-align: center; font-size: 0.75rem; }
+    .swatch i { display: block; height: 72px; margin-bottom: 0.4rem; border: 1px solid rgba(0,0,0,0.08); }
+    .logo-live { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; padding: 1.5rem; background: #F5F0E8; }
+    .logo-live.on-navy { background: #0B1220; color: #F5F0E8; }
+    .logo-live img, .logo-live object, .logo-live svg { max-height: 56px; }
+    .fav-live { width: 64px; height: 64px; }
+    .cta-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .cta-card { padding: 1.25rem; border: 1px solid rgba(11,18,32,0.1); background: #fff; }
+    .cta-card h3 { margin: 0 0 0.5rem; font-size: 1rem; }
+    .cta-card.pick { border-color: #A67C52; box-shadow: 0 0 0 1px #A67C52; }
+    .pill { display: inline-block; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #A67C52; margin-bottom: 0.5rem; }
+    video, .ritual-grid { width: 100%; }
+    .ritual-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; }
+    .ritual-grid img { width: 100%; aspect-ratio: 9/16; object-fit: cover; }
+    @media (max-width: 800px) {
+      .design-grid, .cta-compare { grid-template-columns: 1fr; }
+      .ritual-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="announce">Brand polish designs · for Charne review<a href="index.html">Back to site</a></div>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">DRY <span class="amp">&amp;</span> CO.</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="brand-designs.html" class="active">Designs</a>
+        <a href="size-guide.html">Size guide</a>
+        <a href="dry-ritual.html">Dry Ritual clip</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="kicker" style="color:#a67c52">Section 5 — Brand polish</div>
+        <h1>Design options, live on the site</h1>
+        <p>Logo, favicon, quieter hero CTAs, and a compressed hero image. Pick what stays.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container design-page">
+
+        <div class="design-block">
+          <h2>1. Logo wordmark</h2>
+          <p class="lead">Serif lockup from the end-card / leather-patch world. SVG for crisp nav; PNG mock for presentation.</p>
+          <div class="design-grid">
+            <img src="assets/images/designs/design-logo-wordmark.png" alt="Logo wordmark design">
+            <div>
+              <div class="logo-live">
+                <img src="assets/images/logo-wordmark.svg" alt="DRY & CO. SVG" height="48">
+                <span>Live SVG on ivory</span>
+              </div>
+              <div class="logo-live on-navy" style="margin-top:1rem">
+                <span style="font-family:Georgia,serif;letter-spacing:0.22em;font-size:1.4rem">DRY &amp; CO.</span>
+                <span>On navy (end-card feel)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-block">
+          <h2>2. Favicon</h2>
+          <p class="lead">D&amp;C monogram on navy with leather underline — shows in browser tabs.</p>
+          <div class="design-grid">
+            <img src="assets/images/designs/design-favicon-dc.png" alt="Favicon design">
+            <div class="logo-live">
+              <img class="fav-live" src="assets/images/favicon.svg" alt="Live favicon">
+              <div>
+                <div class="pill">Live now</div>
+                <p style="margin:0;opacity:0.75">`assets/images/favicon.svg` linked from the homepage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-block">
+          <h2>3. Hero CTAs — fewer, clearer</h2>
+          <p class="lead">One primary shop action. One quiet story link. Stats moved out of the first viewport.</p>
+          <img src="assets/images/designs/design-hero-cta.png" alt="Hero CTA design mock" style="margin-bottom:1.25rem">
+          <div class="cta-compare">
+            <div class="cta-card">
+              <div class="pill">Before</div>
+              <h3>Two loud shop buttons + stats</h3>
+              <p style="opacity:0.75;margin:0">Shop the collection · Shop bestselling sets · rating / shipping / free-ship strip under the fold of the hero.</p>
+            </div>
+            <div class="cta-card pick">
+              <div class="pill">Shipped live</div>
+              <h3>Shop + Our story</h3>
+              <p style="opacity:0.75;margin:0">Primary button to shop. Ghost link to Milo’s story. Trust strip still sits just below the hero.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-block">
+          <h2>4. Hero as WebP</h2>
+          <p class="lead">Same woman as “Why it sells”, compressed for mobile speed without the soft AI-upscale mush.</p>
+          <div class="swatch-row">
+            <div class="swatch"><i style="background:#0B1220"></i>Navy</div>
+            <div class="swatch"><i style="background:#F5F0E8"></i>Ivory</div>
+            <div class="swatch"><i style="background:#A67C52"></i>Leather</div>
+            <div class="swatch"><i style="background:#E8C9A0"></i>Highlight</div>
+          </div>
+          <p style="margin-top:1rem"><a class="btn btn-outline" href="index.html">See live homepage</a></p>
+        </div>
+
+        <div class="design-block">
+          <h2>5. Dry Ritual clip frames</h2>
+          <p class="lead">Story / Status sequence — wrap → robe → leather patch → rest → end card. Full clip on the Dry Ritual page.</p>
+          <div class="ritual-grid">
+            <img src="assets/images/ritual/ritual-01-wrap.png" alt="Wrap">
+            <img src="assets/images/ritual/ritual-02-robe.png" alt="Robe">
+            <img src="assets/images/ritual/ritual-03-patch.png" alt="Patch">
+            <img src="assets/images/ritual/ritual-04-rest.png" alt="Rest">
+            <img src="assets/images/ritual/ritual-05-endcard.png" alt="End card">
+          </div>
+          <p style="margin-top:1rem"><a class="btn btn-primary" href="dry-ritual.html">Open clip page</a></p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</body>
+</html>

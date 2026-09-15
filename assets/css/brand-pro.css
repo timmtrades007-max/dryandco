@@ -1,4 +1,4 @@
-/* dry&co â€” sellability layer */
+/* dry&co - sellability layer */
 
 .announce {
   position: fixed;
@@ -343,11 +343,12 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  z-index: 2;
+  z-index: 5;
   width: 40px;
   height: 40px;
   background: var(--white);
   border: 1px solid var(--line);
+  cursor: pointer;
 }
 
 .qv-grid {
@@ -358,12 +359,66 @@
 .qv-media {
   background: var(--stone);
   min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.qv-media .qv-main {
+  width: 100%;
+  flex: 1;
+  min-height: 340px;
+  object-fit: cover;
 }
 
 .qv-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.qv-thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+  padding: 0.55rem;
+  background: #fff;
+}
+
+.qv-thumb {
+  border: 1px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  background: var(--stone);
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.qv-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.qv-thumb.active,
+.qv-thumb:hover {
+  border-color: #A67C52;
+}
+
+.size-guide-link {
+  margin-left: auto;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #A67C52;
+  align-self: center;
+}
+
+.size-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .qv-copy {

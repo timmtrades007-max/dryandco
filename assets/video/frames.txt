@@ -1,0 +1,11 @@
+file 'C:\Users\timme\Downloads\dryco-website\assets\images\ritual\ritual-01-wrap.png'
+duration 2.2
+file 'C:\Users\timme\Downloads\dryco-website\assets\images\ritual\ritual-02-robe.png'
+duration 2.2
+file 'C:\Users\timme\Downloads\dryco-website\assets\images\ritual\ritual-03-patch.png'
+duration 2.0
+file 'C:\Users\timme\Downloads\dryco-website\assets\images\ritual\ritual-04-rest.png'
+duration 2.2
+file 'C:\Users\timme\Downloads\dryco-website\assets\images\ritual\ritual-05-endcard.png'
+duration 2.4
+file 'C:\Users\timme\Downloads\dryco-website\assets\images\ritual\ritual-05-endcard.png'
